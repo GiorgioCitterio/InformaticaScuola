@@ -10,6 +10,8 @@ public partial class Facile : ContentPage
     public int coppieTrovate = 0;
     public int mosse = 0;
     public Stopwatch sw = new Stopwatch();
+    public int rigaCorrente;
+    public int colonnaCorrente;
     public Facile()
 	{
 		InitializeComponent();
@@ -42,7 +44,6 @@ public partial class Facile : ContentPage
             return;
         }
         ImageButton image = (ImageButton)sender;
-        lblTempo.Text = "Tempo: "+sw.Elapsed.ToString();
         await image.RotateTo(180, 200);
         image.Rotation = 0;
         image.Source = "num" + matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)].ToString() + ".jpg";
@@ -51,6 +52,10 @@ public partial class Facile : ContentPage
         lblMosse.Text = "Mosse: "+mosse;
         if (contCarteGir >= 2)
         {
+            if (rigaCorrente == Grid.GetRow(image) && colonnaCorrente == Grid.GetColumn(image))
+            {
+                return;
+            }
             await Task.Delay(500);
             if (matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)] == matricePosNumeri[Grid.GetRow(cartaGirata), Grid.GetColumn(cartaGirata)])
             {
@@ -72,8 +77,11 @@ public partial class Facile : ContentPage
             contCarteGir = 0;
         }
         else
+        {
             cartaGirata = image;
-        
+            rigaCorrente = Grid.GetRow(image);
+            colonnaCorrente = Grid.GetColumn(image);
+        }  
     }
 
     private async void StopGame(object sender, EventArgs e)

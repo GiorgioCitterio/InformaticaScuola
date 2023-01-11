@@ -8,7 +8,7 @@
     <Grid
         ColumnDefinitions="*, *, *, *"
         RowDefinitions="*, *, *, *, *"
-        Padding="20">
+        Padding="15">
         <ImageButton
             Margin="7"
             BackgroundColor="#F4C531"
@@ -126,6 +126,7 @@
             BorderWidth="5">
         </ImageButton>
         <ImageButton
+            BackgroundColor="#F4C531"
             Margin="7"
             Grid.Row="3"
             Grid.Column="1"
@@ -153,7 +154,7 @@
         </ImageButton>
         <Label
             x:Name="lblMosse"
-            Text="Mosse: "
+            Text="Mosse: 0"
             Grid.Row="4"
             Grid.Column="0"
             TextColor="Black"
@@ -162,13 +163,20 @@
             VerticalTextAlignment="Center"/>
         <Label
             x:Name="lblCoppieTrovate"
-            Text="Coppie trovate: "
+            Text="Coppie trovate: 0"
             Grid.Row="4"
             Grid.Column="1"
             TextColor="Black"
             FontSize="24"
             FontFamily="TimesNewRoman"
             VerticalTextAlignment="Center"/>
+        <!--<ProgressBar
+            x:Name="progressBar"
+            Progress="0.0"
+            Background="White"
+            ProgressColor="Black"
+            Grid.Row="4"
+            Grid.Column="2"/>-->
         <Label
             x:Name="lblTempo"
             Text="Tempo: "
@@ -177,7 +185,8 @@
             TextColor="Black"
             FontSize="24"
             FontFamily="TimesNewRoman"
-            VerticalTextAlignment="Center"/>
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"/>
         <Button
             Text="Stop"
             BackgroundColor="Black"

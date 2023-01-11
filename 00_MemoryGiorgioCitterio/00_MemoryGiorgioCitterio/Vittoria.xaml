@@ -8,5 +8,14 @@
             Text="hai vinto!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Button
+            Text="Torna alla pagina principale"
+            BackgroundColor="Black"
+            TextColor="Wheat"
+            FontFamily="TimesNewRoman"
+            FontSize="18"
+            Clicked="ToHome"
+            CornerRadius="5">
+        </Button>
     </VerticalStackLayout>
 </ContentPage>
