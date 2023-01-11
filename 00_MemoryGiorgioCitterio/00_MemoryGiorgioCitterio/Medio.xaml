@@ -5,8 +5,8 @@
              Title="Medio"
              BackgroundColor="White">
     <Grid
-        ColumnDefinitions="*, *, *, *, *"
-        RowDefinitions="*, *, *, *, *, *"
+        ColumnDefinitions="*, *, *, *, *, *"
+        RowDefinitions="*, *, *, *, *"
         Padding="15">
         <ImageButton
             CornerRadius="10"
@@ -62,6 +62,16 @@
             CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
+            Grid.Row="0"
+            Grid.Column="5"
+            Clicked="HasClicked" 
+            BorderColor="Black"
+            BorderWidth="5">
+        </ImageButton>
+        <ImageButton
+            CornerRadius="10"
+            Margin="7"
+            BackgroundColor="#F4C531"
             Grid.Row="1"
             Grid.Column="0"
             Clicked="HasClicked" 
@@ -104,6 +114,16 @@
             BackgroundColor="#F4C531"
             Grid.Row="1"
             Grid.Column="4"
+            Clicked="HasClicked" 
+            BorderColor="Black"
+            BorderWidth="5">
+        </ImageButton>
+        <ImageButton
+            CornerRadius="10"
+            Margin="7"
+            BackgroundColor="#F4C531"
+            Grid.Row="1"
+            Grid.Column="5"
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
@@ -161,6 +181,16 @@
             CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
+            Grid.Row="2"
+            Grid.Column="5"
+            Clicked="HasClicked" 
+            BorderColor="Black"
+            BorderWidth="5">
+        </ImageButton>
+        <ImageButton
+            CornerRadius="10"
+            Margin="7"
+            BackgroundColor="#F4C531"
             Grid.Row="3"
             Grid.Column="0"
             Clicked="HasClicked" 
@@ -211,48 +241,8 @@
             CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
-            Grid.Row="4"
-            Grid.Column="0"
-            Clicked="HasClicked" 
-            BorderColor="Black"
-            BorderWidth="5">
-        </ImageButton>
-        <ImageButton
-            CornerRadius="10"
-            BackgroundColor="#F4C531"
-            Margin="7"
-            Grid.Row="4"
-            Grid.Column="1"
-            Clicked="HasClicked" 
-            BorderColor="Black"
-            BorderWidth="5">
-        </ImageButton>
-        <ImageButton
-            CornerRadius="10"
-            Margin="7"
-            BackgroundColor="#F4C531"
-            Grid.Row="4"
-            Grid.Column="2"
-            Clicked="HasClicked" 
-            BorderColor="Black"
-            BorderWidth="5">
-        </ImageButton>
-        <ImageButton
-            CornerRadius="10"
-            Margin="7"
-            BackgroundColor="#F4C531"
-            Grid.Row="4"
-            Grid.Column="3"
-            Clicked="HasClicked" 
-            BorderColor="Black"
-            BorderWidth="5">
-        </ImageButton>
-        <ImageButton
-            CornerRadius="10"
-            Margin="7"
-            BackgroundColor="#F4C531"
-            Grid.Row="4"
-            Grid.Column="4"
+            Grid.Row="3"
+            Grid.Column="5"
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
@@ -260,7 +250,7 @@
         <Label
             x:Name="lblMosse"
             Text="Mosse: "
-            Grid.Row="5"
+            Grid.Row="4"
             Grid.Column="0"
             TextColor="Black"
             FontSize="24"
@@ -269,7 +259,7 @@
         <Label
             x:Name="lblCoppieTrovate"
             Text="Coppie trovate: "
-            Grid.Row="5"
+            Grid.Row="4"
             Grid.Column="1"
             TextColor="Black"
             FontSize="24"
@@ -285,7 +275,7 @@
         <Label
             x:Name="lblTempo"
             Text="Tempo: "
-            Grid.Row="5"
+            Grid.Row="4"
             Grid.Column="2"
             TextColor="Black"
             FontSize="24"
@@ -293,15 +283,27 @@
             VerticalTextAlignment="Center"
             HorizontalTextAlignment="Start"/>
         <Button
-            Text="Stop"
+            Text="Cambia livello di difficoltà"
             BackgroundColor="Black"
             TextColor="Wheat"
             FontFamily="TimesNewRoman"
             FontSize="18"
-            Grid.Row="5"
+            Grid.Row="4"
             Grid.Column="3"
-            Grid.ColumnSpan="2"
             Clicked="StopGame"
+            CornerRadius="15"
+            WidthRequest="235"
+            HeightRequest="75">
+        </Button>
+        <Button
+            Text="Cambia tema"
+            BackgroundColor="Black"
+            TextColor="Wheat"
+            FontFamily="TimesNewRoman"
+            FontSize="18"
+            Grid.Row="4"
+            Grid.Column="4"
+            Clicked="ChangeTheme"
             CornerRadius="15"
             WidthRequest="150"
             HeightRequest="75">
