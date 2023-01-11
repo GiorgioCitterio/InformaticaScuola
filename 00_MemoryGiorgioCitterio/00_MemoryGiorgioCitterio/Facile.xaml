@@ -7,117 +7,117 @@
         ColumnDefinitions="*, *, *, *"
         RowDefinitions="*, *, *, *"
         Padding="20">
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="0"
-                     Grid.Column="0"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="0"
+            Grid.Column="0"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="0"
-                     Grid.Column="1"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="0"
+            Grid.Column="1"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="0"
-                     Grid.Column="2"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="0"
+            Grid.Column="2"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="0"
-                     Grid.Column="3"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="0"
+            Grid.Column="3"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="1"
-                     Grid.Column="0"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="1"
+            Grid.Column="0"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="1"
-                     Grid.Column="1"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="1"
+            Grid.Column="1"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="1"
-                     Grid.Column="2"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="1"
+            Grid.Column="2"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="1"
-                     Grid.Column="3"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="1"
+            Grid.Column="3"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="2"
-                     Grid.Column="0"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="2"
+            Grid.Column="0"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="2"
-                     Grid.Column="1"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="2"
+            Grid.Column="1"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="2"
-                     Grid.Column="2"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="2"
+            Grid.Column="2"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="2"
-                     Grid.Column="3"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="2"
+            Grid.Column="3"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="3"
-                     Grid.Column="0"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="3"
+            Grid.Column="0"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="3"
-                     Grid.Column="1"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="3"
+            Grid.Column="1"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="3"
-                     Grid.Column="2"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="3"
+            Grid.Column="2"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
-        <ImageButton BackgroundColor="Yellow"
-                     Grid.Row="3"
-                     Grid.Column="3"
-                     Clicked="HasClicked" 
-                     BorderColor="Black">
-
+        <ImageButton
+            BackgroundColor="Yellow"
+            Grid.Row="3"
+            Grid.Column="3"
+            Clicked="HasClicked" 
+            BorderColor="Black">
         </ImageButton>
     </Grid>
 </ContentPage>
