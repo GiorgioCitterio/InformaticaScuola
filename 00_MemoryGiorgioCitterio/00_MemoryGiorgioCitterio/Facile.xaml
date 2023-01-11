@@ -10,6 +10,7 @@
         RowDefinitions="*, *, *, *, *"
         Padding="15">
         <ImageButton
+            CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
             BorderColor="Black"
@@ -19,6 +20,7 @@
             Clicked="HasClicked">
         </ImageButton>
         <ImageButton
+            CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
             Grid.Row="0"
@@ -28,6 +30,7 @@
             BorderWidth="5">
         </ImageButton>
         <ImageButton
+            CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
             Grid.Row="0"
@@ -37,6 +40,7 @@
             BorderWidth="5">
         </ImageButton>
         <ImageButton
+            CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
             Grid.Row="0"
@@ -46,6 +50,7 @@
             BorderWidth="5">
         </ImageButton>
         <ImageButton
+            CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
             Grid.Row="1"
@@ -55,6 +60,7 @@
             BorderWidth="5">
         </ImageButton>
         <ImageButton
+            CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
             Grid.Row="1"
@@ -64,6 +70,7 @@
             BorderWidth="5">
         </ImageButton>
         <ImageButton
+            CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
             Grid.Row="1"
@@ -73,6 +80,7 @@
             BorderWidth="5">
         </ImageButton>
         <ImageButton
+            CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
             Grid.Row="1"
@@ -82,6 +90,7 @@
             BorderWidth="5">
         </ImageButton>
         <ImageButton
+            CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
             Grid.Row="2"
@@ -91,6 +100,7 @@
             BorderWidth="5">
         </ImageButton>
         <ImageButton
+            CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
             Grid.Row="2"
@@ -100,6 +110,7 @@
             BorderWidth="5">
         </ImageButton>
         <ImageButton
+            CornerRadius="10"
             Margin="7"
             Grid.Row="2"
             Grid.Column="2"
@@ -108,6 +119,7 @@
             BorderWidth="5" 
             BackgroundColor="#F4C531"/>
         <ImageButton
+            CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
             Grid.Row="2"
@@ -117,6 +129,7 @@
             BorderWidth="5">
         </ImageButton>
         <ImageButton
+            CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
             Grid.Row="3"
@@ -126,6 +139,7 @@
             BorderWidth="5">
         </ImageButton>
         <ImageButton
+            CornerRadius="10"
             BackgroundColor="#F4C531"
             Margin="7"
             Grid.Row="3"
@@ -135,6 +149,7 @@
             BorderWidth="5">
         </ImageButton>
         <ImageButton
+            CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
             Grid.Row="3"
@@ -144,6 +159,7 @@
             BorderWidth="5">
         </ImageButton>
         <ImageButton
+            CornerRadius="10"
             Margin="7"
             BackgroundColor="#F4C531"
             Grid.Row="3"
@@ -154,7 +170,7 @@
         </ImageButton>
         <Label
             x:Name="lblMosse"
-            Text="Mosse: 0"
+            Text="Mosse: "
             Grid.Row="4"
             Grid.Column="0"
             TextColor="Black"
@@ -163,7 +179,7 @@
             VerticalTextAlignment="Center"/>
         <Label
             x:Name="lblCoppieTrovate"
-            Text="Coppie trovate: 0"
+            Text="Coppie trovate: "
             Grid.Row="4"
             Grid.Column="1"
             TextColor="Black"
@@ -196,7 +212,7 @@
             Grid.Row="4"
             Grid.Column="3"
             Clicked="StopGame"
-            CornerRadius="5"
+            CornerRadius="15"
             WidthRequest="150"
             HeightRequest="75">
         </Button>
