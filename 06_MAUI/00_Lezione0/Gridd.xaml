@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_00_Lezione0.Gridd"
+             Title="Gridd">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <BoxView Color="Red"/>
+        <Label Text="riga 0 - colonna 0"
+               Padding="20"
+               FontSize="20"
+               TextColor="Black"/>
+        
+        <BoxView Color="Blue"
+                 Grid.Column="1"
+                 Grid.RowSpan="2"/>
+        <Label Text="riga 0 - colonna 1"
+               Grid.Column="1"
+               Grid.RowSpan="2"
+               Padding="20"
+               FontSize="20"
+               TextColor="Black"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"/>
+
+        <BoxView Color="Yellow"
+                 Grid.Row="1"/>
+        <Label Text="riga 1 - colonna 0"
+               Grid.Row="1"
+               Padding="20"
+               FontSize="20"
+               TextColor="Black"/>
+
+        <!--<BoxView Color="Green"
+                 Grid.Row="1"
+                 Grid.Column="1"/>
+        <Label Text="riga 1 - colonna 1"
+               Grid.Row="1"
+               Grid.Column="1"
+               Padding="20"
+               FontSize="20"
+               TextColor="Black"/>-->
+
+        <BoxView Color="Pink"
+                 Grid.Row="2"
+                 Grid.ColumnSpan="2"/>
+        <Label Text="riga 2 - colonna 0"
+               Grid.Row="2"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               Padding="20"
+               FontSize="20"
+               TextColor="Black"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"/>
+
+        <!--<BoxView Color="Black"
+                 Grid.Row="2"
+                 Grid.Column="1"/>
+        <Label Text="riga 2 - colonna 1"
+               Grid.Row="2"
+               Grid.Column="1"
+               Padding="20"
+               FontSize="20"
+               TextColor="Black"/>-->
+    </Grid>
+</ContentPage>

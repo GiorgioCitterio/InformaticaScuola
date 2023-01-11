@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_00_Lezione0.Pagina1"
+             Title="Pagina1">
+    <!--<VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            BackgroundColor="Yellow"
+            TextColor="Black"
+            FontSize="24"/>
+        <Label
+            Text="Ciao 4IB"
+            BackgroundColor="Red"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="24"/>
+        <Label
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="24">
+            <Label.BackgroundColor>
+               Blue
+            </Label.BackgroundColor>
+            <Label.Text>
+                ciao sono un'altra Label
+            </Label.Text>
+        </Label>
+        <Button
+            Text="button1"
+            BackgroundColor="Purple"
+            TextColor="AntiqueWhite"
+            Margin="50"
+            Padding="20"
+            BorderColor="White"
+            BorderWidth="5"
+            WidthRequest="275"
+            HeightRequest="100"/>
+    </VerticalStackLayout>-->
+    
+    <!--<StackLayout Margin="20"
+                 Spacing="6">
+        <Label Text="Start"
+               BackgroundColor="Gray"
+               HorizontalOptions="Start" />
+        <Label Text="Center"
+               BackgroundColor="Gray"
+               HorizontalOptions="Center" />
+        <Label Text="End"
+               BackgroundColor="Gray"
+               HorizontalOptions="End" />
+        <Label Text="Fill"
+               BackgroundColor="Gray"
+               HorizontalOptions="Fill" />
+    </StackLayout>-->
+    <VerticalStackLayout Margin="50">
+        <Frame BorderColor="White"
+               Padding="5">
+            <StackLayout Orientation="Horizontal"
+                         Spacing="15">
+                <BoxView Color="Red"
+                         WidthRequest="40" />
+                <Label Text="Red"
+                       FontSize="18"
+                       VerticalOptions="Center" />
+            </StackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

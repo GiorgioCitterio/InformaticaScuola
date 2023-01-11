@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_05_EsempiLayout.PagePreference"
+             Title="PagePreference">
+    <VerticalStackLayout Padding="20, 20, 20, 20">
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            x:Name="lblCognome"/>
+        <Editor
+            x:Name="Cognome"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            BackgroundColor="Yellow"
+            WidthRequest="300"
+            MaximumWidthRequest="500"
+            TextColor="Black"/>
+        <Button
+            Text="Salva"
+            Clicked="Salva"/>
+        <Button
+            Text="Carica"
+            Clicked="Carica"/>
+        <Button
+            Text="Reset"
+            Clicked="Reset"/>
+        <Button 
+            Text="SalvaInCache"
+            Clicked="SalvaCache"/>
+        <Button
+            Text="CaricaInCache"
+            Clicked="CaricaCache"/>
+        <Button Text="LeggiBoundle"
+                Clicked="LeggiBoundle"/>
+        <Label
+            x:Name="Path" 
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            BackgroundColor="Purple"
+            TextColor="White"/>
+    </VerticalStackLayout>
+</ContentPage>

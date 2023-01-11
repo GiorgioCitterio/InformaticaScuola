@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_08_EsempioTabbedPage.TabbedPageDemo"
+             Title="TabbedPageDemo"
+            BarBackgroundColor="Yellow"
+            BarTextColor="Black"
+            SelectedTabColor="Purple">
+    <ContentPage Title="Scelta 1" IconImageSource="dotnet_bot.svg">
+        <Label Text="Scelta1"/>
+    </ContentPage>
+    <ContentPage Title="Scelta 2" IconImageSource="dotnet_bot.svg">
+        <Label Text="Scelta2"/>
+    </ContentPage>
+    <ContentPage Title="Scelta 3" IconImageSource="dotnet_bot.svg">
+        <Label Text="Scelta3" TextColor="Red"/>
+    </ContentPage>
+</TabbedPage>
