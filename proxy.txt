@@ -1,0 +1,16 @@
+set http_proxy=proxy:3128
+set https_proxy=proxy:3128
+
+echo %https_proxy%
+echo %http_proxy%
+
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+dotnet ef migrations add init
+dotnet ef database update
+
+git config --global http.proxy proxy:3128
+
+git config --global --unset http.proxy proxy:3128
