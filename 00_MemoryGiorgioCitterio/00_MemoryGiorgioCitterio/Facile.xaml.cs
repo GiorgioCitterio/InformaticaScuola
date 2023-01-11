@@ -46,7 +46,23 @@ public partial class Facile : ContentPage
         ImageButton image = (ImageButton)sender;
         await image.RotateTo(180, 200);
         image.Rotation = 0;
-        image.Source = "num" + matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)].ToString() + ".jpg";
+        switch (SceltaTema.Globals.scelta)
+        {
+            case Scelta.Arte:
+                image.Source = "arte" + matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)].ToString() + ".jpg";
+                break;
+            case Scelta.Supereroi:
+                image.Source = "marvel_" + matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)].ToString() + ".jpg";
+                break;
+            case Scelta.Frutta:
+                image.Source = "frutta" + matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)].ToString() + ".jpg";
+                break;
+            case Scelta.Citta:
+                image.Source = "cit" + matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)].ToString() + ".jpg";
+                break;
+            default:
+                break;
+        }
         contCarteGir++;
         mosse++;
         lblMosse.Text = "Mosse: "+mosse;

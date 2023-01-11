@@ -6,4 +6,14 @@ public partial class Medio : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void HasClicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void StopGame(object sender, EventArgs e)
+    {
+
+    }
 }

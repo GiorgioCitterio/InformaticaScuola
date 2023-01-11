@@ -202,7 +202,7 @@
             FontSize="24"
             FontFamily="TimesNewRoman"
             VerticalTextAlignment="Center"
-            HorizontalTextAlignment="Center"/>
+            HorizontalTextAlignment="Start"/>
         <Button
             Text="Stop"
             BackgroundColor="Black"
