@@ -2,122 +2,194 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_00_MemoryGiorgioCitterio.Facile"
-             Title="Facile">
+             xmlns:controls="clr-namespace:_00_MemoryGiorgioCitterio"
+             Title="Facile"
+             BackgroundColor="White">
     <Grid
         ColumnDefinitions="*, *, *, *"
-        RowDefinitions="*, *, *, *"
+        RowDefinitions="*, *, *, *, *"
         Padding="20">
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
+            BackgroundColor="#F4C531"
+            BorderColor="Black"
+            BorderWidth="5"
             Grid.Row="0"
             Grid.Column="0"
-            Clicked="HasClicked" 
-            BorderColor="Black">
+            Clicked="HasClicked">
         </ImageButton>
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
+            BackgroundColor="#F4C531"
             Grid.Row="0"
             Grid.Column="1"
             Clicked="HasClicked" 
-            BorderColor="Black">
+            BorderColor="Black"
+            BorderWidth="5">
         </ImageButton>
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
+            BackgroundColor="#F4C531"
             Grid.Row="0"
             Grid.Column="2"
             Clicked="HasClicked" 
-            BorderColor="Black">
+            BorderColor="Black"
+            BorderWidth="5">
         </ImageButton>
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
+            BackgroundColor="#F4C531"
             Grid.Row="0"
             Grid.Column="3"
             Clicked="HasClicked" 
-            BorderColor="Black">
+            BorderColor="Black"
+            BorderWidth="5">
         </ImageButton>
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
+            BackgroundColor="#F4C531"
             Grid.Row="1"
             Grid.Column="0"
             Clicked="HasClicked" 
-            BorderColor="Black">
+            BorderColor="Black"
+            BorderWidth="5">
         </ImageButton>
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
+            BackgroundColor="#F4C531"
             Grid.Row="1"
             Grid.Column="1"
             Clicked="HasClicked" 
-            BorderColor="Black">
+            BorderColor="Black"
+            BorderWidth="5">
         </ImageButton>
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
+            BackgroundColor="#F4C531"
             Grid.Row="1"
             Grid.Column="2"
             Clicked="HasClicked" 
-            BorderColor="Black">
+            BorderColor="Black"
+            BorderWidth="5">
         </ImageButton>
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
+            BackgroundColor="#F4C531"
             Grid.Row="1"
             Grid.Column="3"
             Clicked="HasClicked" 
-            BorderColor="Black">
+            BorderColor="Black"
+            BorderWidth="5">
         </ImageButton>
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
+            BackgroundColor="#F4C531"
             Grid.Row="2"
             Grid.Column="0"
             Clicked="HasClicked" 
-            BorderColor="Black">
+            BorderColor="Black"
+            BorderWidth="5">
         </ImageButton>
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
+            BackgroundColor="#F4C531"
             Grid.Row="2"
             Grid.Column="1"
             Clicked="HasClicked" 
-            BorderColor="Black">
+            BorderColor="Black"
+            BorderWidth="5">
         </ImageButton>
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
             Grid.Row="2"
             Grid.Column="2"
             Clicked="HasClicked" 
-            BorderColor="Black">
-        </ImageButton>
+            BorderColor="Black"
+            BorderWidth="5" 
+            BackgroundColor="#F4C531"/>
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
+            BackgroundColor="#F4C531"
             Grid.Row="2"
             Grid.Column="3"
             Clicked="HasClicked" 
-            BorderColor="Black">
+            BorderColor="Black"
+            BorderWidth="5">
         </ImageButton>
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
+            BackgroundColor="#F4C531"
             Grid.Row="3"
             Grid.Column="0"
             Clicked="HasClicked" 
-            BorderColor="Black">
+            BorderColor="Black"
+            BorderWidth="5">
         </ImageButton>
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
             Grid.Row="3"
             Grid.Column="1"
             Clicked="HasClicked" 
-            BorderColor="Black">
+            BorderColor="Black"
+            BorderWidth="5">
         </ImageButton>
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
+            BackgroundColor="#F4C531"
             Grid.Row="3"
             Grid.Column="2"
             Clicked="HasClicked" 
-            BorderColor="Black">
+            BorderColor="Black"
+            BorderWidth="5">
         </ImageButton>
         <ImageButton
-            BackgroundColor="Yellow"
+            Margin="7"
+            BackgroundColor="#F4C531"
             Grid.Row="3"
             Grid.Column="3"
             Clicked="HasClicked" 
-            BorderColor="Black">
+            BorderColor="Black"
+            BorderWidth="5">
         </ImageButton>
+        <Label
+            x:Name="lblMosse"
+            Text="Mosse: "
+            Grid.Row="4"
+            Grid.Column="0"
+            TextColor="Black"
+            FontSize="24"
+            FontFamily="TimesNewRoman"
+            VerticalTextAlignment="Center"/>
+        <Label
+            x:Name="lblCoppieTrovate"
+            Text="Coppie trovate: "
+            Grid.Row="4"
+            Grid.Column="1"
+            TextColor="Black"
+            FontSize="24"
+            FontFamily="TimesNewRoman"
+            VerticalTextAlignment="Center"/>
+        <Label
+            x:Name="lblTempo"
+            Text="Tempo: "
+            Grid.Row="4"
+            Grid.Column="2"
+            TextColor="Black"
+            FontSize="24"
+            FontFamily="TimesNewRoman"
+            VerticalTextAlignment="Center"/>
+        <Button
+            Text="Stop"
+            BackgroundColor="Black"
+            TextColor="Wheat"
+            FontFamily="TimesNewRoman"
+            FontSize="18"
+            Grid.Row="4"
+            Grid.Column="3"
+            Clicked="StopGame"
+            CornerRadius="5"
+            WidthRequest="150"
+            HeightRequest="75">
+        </Button>
     </Grid>
 </ContentPage>

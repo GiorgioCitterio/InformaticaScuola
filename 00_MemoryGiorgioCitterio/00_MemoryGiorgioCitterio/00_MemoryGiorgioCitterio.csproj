@@ -46,6 +46,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.3" />
+	  <PackageReference Include="Syncfusion.Maui.ProgressBar" Version="20.4.43" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Difficile.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -53,6 +58,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Medio.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vittoria.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
