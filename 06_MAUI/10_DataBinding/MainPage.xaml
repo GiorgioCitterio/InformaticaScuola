@@ -22,17 +22,17 @@
                                Path=Value}"/>
         <Slider x:Name="slider"
                 Maximum="180"
-                VerticalOptions="Center" />
+                VerticalOptions="Center"/>
         
         <Label Text="TEXT1"
                FontSize="40"
                HorizontalOptions="Center"
                VerticalOptions="Center"
                Scale="{Binding Source={x:Reference slider1},
-                               Path=Value}" />
+                               Path=Value}"/>
         <Slider x:Name="slider1"
                 Minimum="-2"
                 Maximum="2"
-                VerticalOptions="Center" />
+                VerticalOptions="Center"/>
     </StackLayout>
 </ContentPage>
