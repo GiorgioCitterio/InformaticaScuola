@@ -12,7 +12,10 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 				fonts.AddFont("times new roman.ttf", "TimesNewRoman");
-			});
+                fonts.AddFont("FiraSans-Bold.otf", "FiraSansBold");
+                fonts.AddFont("Purple Smile.ttf", "PurpleSmile");
+                fonts.AddFont("Requiem.ttf", "Requiem");
+            });
 
 		return builder.Build();
 	}
