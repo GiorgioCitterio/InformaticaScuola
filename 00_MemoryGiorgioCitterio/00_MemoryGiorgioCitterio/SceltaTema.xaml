@@ -6,10 +6,9 @@
              BackgroundColor="Black">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="10"></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition Height="400"></RowDefinition>
+            <RowDefinition Height="350"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -29,7 +28,8 @@
             FontFamily="PurpleSmile"
             FontSize="25"
             HorizontalOptions="Center"
-            VerticalOptions="Center"/>
+            VerticalOptions="Center"
+            Padding="50"/>
         <Image
             Source="tema1.jpg"
             Grid.Row="2"
