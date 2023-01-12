@@ -2,9 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_00_MemoryGiorgioCitterio.SceltaTema"
-             Title="SceltaTema">
+             Title="SceltaTema"
+             BackgroundColor="Black">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="400"></RowDefinition>
@@ -24,10 +26,10 @@
             Grid.Row="1"
             Grid.Column="1"
             Grid.ColumnSpan="2"
-            FontFamily="TimesNewRoman"
+            FontFamily="PurpleSmile"
             FontSize="25"
-            HorizontalTextAlignment="Center"
-            VerticalTextAlignment="Center"/>
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>
         <Image
             Source="tema1.jpg"
             Grid.Row="2"
@@ -38,7 +40,7 @@
             WidthRequest="300"/>
         <Button
             CornerRadius="10"
-            BackgroundColor="Transparent"
+            BackgroundColor="White"
             Margin="7"
             Grid.Row="2"
             Grid.Column="1"
@@ -46,8 +48,8 @@
             TextColor="Black"
             Text="Arte"
             BorderWidth="1"
-            FontFamily="TimesNewRoman"
-            FontSize="12"
+            FontFamily="Requiem"
+            FontSize="18"
             HorizontalOptions="Center"
             VerticalOptions="Center"
             WidthRequest="100"
@@ -63,7 +65,7 @@
             WidthRequest="300"/>
         <Button
             CornerRadius="10"
-            BackgroundColor="Transparent"
+            BackgroundColor="White"
             Margin="7"
             Grid.Row="2"
             Grid.Column="2"
@@ -71,8 +73,8 @@
             TextColor="Black"
             Text="Supereroi"
             BorderWidth="1"
-            FontFamily="TimesNewRoman"
-            FontSize="12"
+            FontFamily="Requiem"
+            FontSize="18"
             HorizontalOptions="Center"
             VerticalOptions="Center"
             WidthRequest="100"
@@ -88,7 +90,7 @@
             WidthRequest="300"/>
         <Button
             CornerRadius="10"
-            BackgroundColor="Transparent"
+            BackgroundColor="White"
             Margin="7"
             Grid.Row="3"
             Grid.Column="1"
@@ -96,8 +98,8 @@
             TextColor="Black"
             Text="Frutta"
             BorderWidth="1"
-            FontFamily="TimesNewRoman"
-            FontSize="12"
+            FontFamily="Requiem"
+            FontSize="18"
             HorizontalOptions="Center"
             VerticalOptions="Center"
             WidthRequest="100"
@@ -113,7 +115,7 @@
             WidthRequest="300"/>
         <Button
             CornerRadius="10"
-            BackgroundColor="Transparent"
+            BackgroundColor="White"
             Margin="7"
             Grid.Row="3"
             Grid.Column="2"
