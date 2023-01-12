@@ -2,29 +2,30 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_00_MemoryGiorgioCitterio.SceltaTema"
-             Title="SceltaTema"
+             Title="Memory"
              BackgroundColor="Black">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="10"></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition Height="350"></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="1"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="250"></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition Height="1"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Label 
             Text="Scegli il tema con cui preferisci giocare"
             TextColor="White"
             Grid.Row="1"
-            Grid.Column="1"
-            Grid.ColumnSpan="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="5"
             FontFamily="PurpleSmile"
             FontSize="25"
             HorizontalOptions="Center"
@@ -58,7 +59,7 @@
         <Image
             Source="tema2.jpg"
             Grid.Row="2"
-            Grid.Column="2"
+            Grid.Column="3"
             HorizontalOptions="Center"
             VerticalOptions="Center"
             HeightRequest="300"
@@ -68,10 +69,10 @@
             BackgroundColor="White"
             Margin="7"
             Grid.Row="2"
-            Grid.Column="2"
+            Grid.Column="3"
             Clicked="Supereroi" 
             TextColor="Black"
-            Text="Supereroi"
+            Text="Marvel"
             BorderWidth="1"
             FontFamily="Requiem"
             FontSize="18"
@@ -108,7 +109,7 @@
         <Image
             Source="tema4.jpg"
             Grid.Row="3"
-            Grid.Column="2"
+            Grid.Column="3"
             HorizontalOptions="Center"
             VerticalOptions="Center"
             HeightRequest="300"
@@ -118,7 +119,7 @@
             BackgroundColor="White"
             Margin="7"
             Grid.Row="3"
-            Grid.Column="2"
+            Grid.Column="3"
             Clicked="Citta" 
             TextColor="Black"
             Text="Paesi"

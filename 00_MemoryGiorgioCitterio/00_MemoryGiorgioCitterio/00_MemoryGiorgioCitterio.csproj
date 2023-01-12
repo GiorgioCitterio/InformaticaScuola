@@ -55,6 +55,9 @@
 	  <MauiXaml Update="Medio.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Perso.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="SceltaTema.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

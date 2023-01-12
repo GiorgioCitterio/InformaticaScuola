@@ -17,6 +17,12 @@
             Grid.Row="0"
             Grid.Column="0"
             Clicked="HasClicked">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -27,6 +33,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -37,6 +49,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -47,6 +65,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -57,6 +81,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -67,6 +97,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -77,6 +113,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -87,6 +129,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -97,6 +145,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -107,6 +161,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -117,6 +177,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -127,6 +193,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -137,6 +209,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -147,6 +225,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -156,7 +240,14 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5" 
-            BackgroundColor="#F4C531"/>
+            BackgroundColor="#F4C531">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
+        </ImageButton>
         <ImageButton
             CornerRadius="10"
             Margin="7"
@@ -166,6 +257,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -176,6 +273,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -186,6 +289,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -196,6 +305,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -206,6 +321,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -216,6 +337,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -226,6 +353,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -236,6 +369,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -246,6 +385,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -256,6 +401,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -266,6 +417,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -276,6 +433,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -286,6 +449,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -296,6 +465,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -306,6 +481,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -316,6 +497,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -326,6 +513,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -336,6 +529,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -346,6 +545,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -356,6 +561,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <ImageButton
             CornerRadius="10"
@@ -366,6 +577,12 @@
             Clicked="HasClicked" 
             BorderColor="Black"
             BorderWidth="5">
+            <ImageButton.Shadow>
+                <Shadow Brush="Black"
+                Offset="20,20"
+                Radius="40"
+                Opacity="0.7" />
+            </ImageButton.Shadow>
         </ImageButton>
         <Label
             x:Name="lblMosse"
@@ -385,13 +602,6 @@
             FontSize="24"
             FontFamily="TimesNewRoman"
             VerticalTextAlignment="Center"/>
-        <!--<ProgressBar
-            x:Name="progressBar"
-            Progress="0.0"
-            Background="White"
-            ProgressColor="Black"
-            Grid.Row="4"
-            Grid.Column="2"/>-->
         <Label
             x:Name="lblTempo"
             Text="Tempo: "

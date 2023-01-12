@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Reflection;
 
 namespace _00_MemoryGiorgioCitterio;
 
@@ -12,6 +13,7 @@ public partial class Facile : ContentPage
     public Stopwatch sw = new Stopwatch();
     public int rigaCorrente;
     public int colonnaCorrente;
+    public int pointer = 0;
     public Facile()
 	{
 		InitializeComponent();
@@ -35,10 +37,34 @@ public partial class Facile : ContentPage
                 count++;
             }
         }
+        Dispatcher.StartTimer(TimeSpan.FromSeconds(1), () =>
+        {
+            TimeSpan span = TimeSpan.FromSeconds(1);
+
+            Dispatcher.DispatchAsync(() =>
+            {
+                pointer -= 1;
+                if (pointer == -1)
+                {
+                    pointer = 59;
+                    lblTempo.Text = "Tempo: 01:00";
+                }
+                if (pointer == 0)
+                {
+                    Navigation.PushAsync(new Perso());
+                }
+                else
+                {
+                    lblTempo.Text = "Tempo: "+pointer.ToString("00:00");
+                }
+            });
+            return true;
+        });
     }
 
     private async void HasClicked(object sender, EventArgs e)
     {
+        
         if (!(sender is ImageButton))
         {
             return;
