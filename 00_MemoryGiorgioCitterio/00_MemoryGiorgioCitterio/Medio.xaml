@@ -410,13 +410,6 @@
             FontSize="24"
             FontFamily="TimesNewRoman"
             VerticalTextAlignment="Center"/>
-        <!--<ProgressBar
-            x:Name="progressBar"
-            Progress="0.0"
-            Background="White"
-            ProgressColor="Black"
-            Grid.Row="4"
-            Grid.Column="2"/>-->
         <Label
             x:Name="lblTempo"
             Text="Tempo: "

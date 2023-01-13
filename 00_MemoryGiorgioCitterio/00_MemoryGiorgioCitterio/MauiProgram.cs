@@ -15,6 +15,7 @@ public static class MauiProgram
                 fonts.AddFont("FiraSans-Bold.otf", "FiraSansBold");
                 fonts.AddFont("Purple Smile.ttf", "PurpleSmile");
                 fonts.AddFont("Requiem.ttf", "Requiem");
+                fonts.AddFont("Low Budget.ttf", "LowBudget");
             });
 
 		return builder.Build();

@@ -12,6 +12,8 @@ public partial class Difficile : ContentPage
     public Stopwatch sw = new Stopwatch();
     public int rigaCorrente;
     public int colonnaCorrente;
+    public int secondi = 0;
+    public bool vittoria = false;
     public Difficile()
     {
         InitializeComponent();
@@ -35,6 +37,23 @@ public partial class Difficile : ContentPage
                 count++;
             }
         }
+        Dispatcher.StartTimer(TimeSpan.FromSeconds(1), () =>
+        {
+            TimeSpan ts = sw.Elapsed;
+            Dispatcher.DispatchAsync(async () =>
+            {
+                secondi -= 1;
+                if (secondi == 0 && vittoria == false)
+                {
+                    await Navigation.PushAsync(new Perso());
+                }
+                else
+                {
+                    lblTempo.Text = "Tempo: " + String.Format("{0:00}:{1:00}", ts.Minutes, ts.Seconds);
+                }
+            });
+            return true;
+        });
     }
 
     private async void HasClicked(object sender, EventArgs e)

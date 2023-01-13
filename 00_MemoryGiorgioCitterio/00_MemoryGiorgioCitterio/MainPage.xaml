@@ -5,7 +5,7 @@
              BackgroundColor="#F4C531">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="125"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -14,10 +14,13 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Frame
+            Margin="10"
             BorderColor="Gray"
             CornerRadius="5"
             Padding="8"
-            WidthRequest="700">
+            WidthRequest="700"
+            Grid.Row="0"
+            Grid.Column="0">
             <StackLayout>
                 <Label
                 Text="Scegli il livello di difficoltà"
@@ -34,7 +37,7 @@
                     HeightRequest="2"
                     HorizontalOptions="Fill"/>
                 <Label 
-                    Text="Facile: 8 coppie da trovare, con 1 minuto di tempo"
+                    Text="Facile: 8 coppie da trovare, con 2 minuti di tempo"
                     TextColor="White"
                     FontFamily="PurpleSmile"
                     FontSize="18"
