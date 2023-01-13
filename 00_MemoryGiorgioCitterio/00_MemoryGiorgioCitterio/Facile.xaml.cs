@@ -1,8 +1,13 @@
 using System.Diagnostics;
-using System.Reflection;
 
 namespace _00_MemoryGiorgioCitterio;
-
+public enum Tema
+{
+    Arte,
+    Supereroi,
+    Frutta,
+    Citta
+}
 public partial class Facile : ContentPage
 {
     public int[,] matricePosNumeri = new int[4, 4];
@@ -13,7 +18,9 @@ public partial class Facile : ContentPage
     public Stopwatch sw = new Stopwatch();
     public int rigaCorrente;
     public int colonnaCorrente;
-    public int pointer = 0;
+    public int secondi = 120;
+    public bool vittoria = false;
+    public bool esegui = true;
     public Facile()
 	{
 		InitializeComponent();
@@ -39,32 +46,30 @@ public partial class Facile : ContentPage
         }
         Dispatcher.StartTimer(TimeSpan.FromSeconds(1), () =>
         {
-            TimeSpan span = TimeSpan.FromSeconds(1);
-
-            Dispatcher.DispatchAsync(() =>
+            TimeSpan ts = sw.Elapsed;
+            Dispatcher.DispatchAsync(async() =>
             {
-                pointer -= 1;
-                if (pointer == -1)
+                secondi -= 1;
+                if (secondi == 0 && vittoria == false)
                 {
-                    pointer = 59;
-                    lblTempo.Text = "Tempo: 01:00";
-                }
-                if (pointer == 0)
-                {
-                    Navigation.PushAsync(new Perso());
+                    await Navigation.PushAsync(new Perso());
                 }
                 else
                 {
-                    lblTempo.Text = "Tempo: "+pointer.ToString("00:00");
+                    lblTempo.Text = "Tempo: "+ String.Format("{0:00}:{1:00}", ts.Minutes, ts.Seconds);
                 }
             });
             return true;
         });
     }
-
     private async void HasClicked(object sender, EventArgs e)
     {
-        
+        if (!esegui)
+        {
+            return;
+        }
+        else
+            esegui = false;
         if (!(sender is ImageButton))
         {
             return;
@@ -76,58 +81,80 @@ public partial class Facile : ContentPage
         {
             case Scelta.Arte:
                 image.Source = "arte" + matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)].ToString() + ".jpg";
+                Dati.tema = Tema.Arte;
                 break;
             case Scelta.Supereroi:
                 image.Source = "marvel_" + matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)].ToString() + ".jpg";
+                Dati.tema = Tema.Supereroi;
                 break;
             case Scelta.Frutta:
                 image.Source = "frutta" + matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)].ToString() + ".jpg";
+                Dati.tema = Tema.Frutta;
                 break;
             case Scelta.Citta:
                 image.Source = "cit" + matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)].ToString() + ".jpg";
+                Dati.tema = Tema.Citta;
                 break;
             default:
                 break;
         }
         contCarteGir++;
         mosse++;
-        lblMosse.Text = "Mosse: "+mosse;
+        lblMosse.Text = "Mosse: " + mosse;
         if (contCarteGir >= 2)
         {
             if (rigaCorrente == Grid.GetRow(image) && colonnaCorrente == Grid.GetColumn(image))
             {
+                esegui = true;
                 return;
             }
             await Task.Delay(500);
             if (matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)] == matricePosNumeri[Grid.GetRow(cartaGirata), Grid.GetColumn(cartaGirata)])
             {
-                contCarteGir= 0;
-                image.IsEnabled= false;
+                contCarteGir = 0;
+                image.IsEnabled = false;
                 cartaGirata.IsEnabled = false;
                 cartaGirata = null;
                 coppieTrovate++;
                 if (coppieTrovate == 8)
                 {
+                    vittoria = true;
                     sw.Stop();
+                    Dati.mosseImpiegate = mosse;
+                    Dati.tempoImpiegato = sw.Elapsed;
+                    Dati.data = DateTime.Now;
                     await Navigation.PushAsync(new Vittoria());
                 }
                 lblCoppieTrovate.Text = "Coppie trovate: " + coppieTrovate;
+                esegui = true;
                 return;
             }
             image.Source = string.Empty;
             cartaGirata.Source = string.Empty;
             contCarteGir = 0;
+            esegui = true;
         }
         else
         {
             cartaGirata = image;
             rigaCorrente = Grid.GetRow(image);
             colonnaCorrente = Grid.GetColumn(image);
-        }  
+            esegui = true;
+        }
     }
-
     private async void StopGame(object sender, EventArgs e)
     {
         await Navigation.PopAsync();
+    }
+    public static class Dati
+    {
+        public static int mosseImpiegate { get; set; }
+        public static TimeSpan tempoImpiegato { get; set; }
+        public static DateTime data { get; set; }
+        public static Tema tema { get; set; }
+    }
+    private async void ChangeTheme(object sender, EventArgs e)
+    {
+        await Navigation.PopToRootAsync();
     }
 }
