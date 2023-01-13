@@ -37,19 +37,19 @@
                     HeightRequest="2"
                     HorizontalOptions="Fill"/>
                 <Label 
-                    Text="Facile: 8 coppie da trovare, con 2 minuti di tempo"
+                    Text="Facile: 8 coppie da trovare, con 1 minuto e 30 secondi di tempo"
                     TextColor="White"
                     FontFamily="PurpleSmile"
                     FontSize="18"
                     VerticalTextAlignment="Center"/>
                 <Label
-                    Text="Medio: 12 coppie da trovare, con 1 minuto di tempo"
+                    Text="Medio: 12 coppie da trovare, con 2 minuti di tempo"
                     TextColor="White"
                     FontFamily="PurpleSmile"
                     FontSize="18"
                     VerticalTextAlignment="Center"/>
                 <Label
-                    Text="Difficile: 16 coppie da trovare, con 1 minuto di tempo"
+                    Text="Difficile: 16 coppie da trovare, con 2 minuti di tempo"
                     TextColor="White"
                     FontFamily="PurpleSmile"
                     FontSize="18"

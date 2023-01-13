@@ -1,7 +1,6 @@
 using System.Diagnostics;
 
 namespace _00_MemoryGiorgioCitterio;
-
 public partial class Difficile : ContentPage
 {
     public int[,] matricePosNumeri = new int[6, 6];
@@ -12,8 +11,9 @@ public partial class Difficile : ContentPage
     public Stopwatch sw = new Stopwatch();
     public int rigaCorrente;
     public int colonnaCorrente;
-    public int secondi = 0;
+    public int secondi = 120;
     public bool vittoria = false;
+    public bool esegui = true;
     public Difficile()
     {
         InitializeComponent();
@@ -55,9 +55,14 @@ public partial class Difficile : ContentPage
             return true;
         });
     }
-
     private async void HasClicked(object sender, EventArgs e)
     {
+        if (!esegui)
+        {
+            return;
+        }
+        else
+            esegui = false;
         if (!(sender is ImageButton))
         {
             return;
@@ -69,15 +74,19 @@ public partial class Difficile : ContentPage
         {
             case Scelta.Arte:
                 image.Source = "arte" + matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)].ToString() + ".jpg";
+                Dati.tema = Tema.Arte;
                 break;
             case Scelta.Supereroi:
                 image.Source = "marvel_" + matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)].ToString() + ".jpg";
+                Dati.tema = Tema.Supereroi;
                 break;
             case Scelta.Frutta:
                 image.Source = "frutta" + matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)].ToString() + ".jpg";
+                Dati.tema = Tema.Frutta;
                 break;
             case Scelta.Citta:
                 image.Source = "cit" + matricePosNumeri[Grid.GetRow(image), Grid.GetColumn(image)].ToString() + ".jpg";
+                Dati.tema = Tema.Citta;
                 break;
             default:
                 break;
@@ -89,6 +98,7 @@ public partial class Difficile : ContentPage
         {
             if (rigaCorrente == Grid.GetRow(image) && colonnaCorrente == Grid.GetColumn(image))
             {
+                esegui = true;
                 return;
             }
             await Task.Delay(500);
@@ -101,31 +111,43 @@ public partial class Difficile : ContentPage
                 coppieTrovate++;
                 if (coppieTrovate == 18)
                 {
+                    vittoria = true;
                     sw.Stop();
+                    Dati.mosseImpiegate = mosse;
+                    Dati.tempoImpiegato = sw.Elapsed;
+                    Dati.data = DateTime.Now;
                     await Navigation.PushAsync(new Vittoria());
                 }
                 lblCoppieTrovate.Text = "Coppie trovate: " + coppieTrovate;
+                esegui = true;
                 return;
             }
             image.Source = string.Empty;
             cartaGirata.Source = string.Empty;
             contCarteGir = 0;
+            esegui = true;
         }
         else
         {
             cartaGirata = image;
             rigaCorrente = Grid.GetRow(image);
             colonnaCorrente = Grid.GetColumn(image);
+            esegui = true;
         }
     }
-
     private async void StopGame(object sender, EventArgs e)
     {
         await Navigation.PopAsync();
     }
-
     private async void ChangeTheme(object sender, EventArgs e)
     {
         await Navigation.PopToRootAsync();
+    }
+    public static class Dati
+    {
+        public static int mosseImpiegate { get; set; }
+        public static TimeSpan tempoImpiegato { get; set; }
+        public static DateTime data { get; set; }
+        public static Tema tema { get; set; }
     }
 }

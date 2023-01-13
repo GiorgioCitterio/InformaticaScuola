@@ -394,7 +394,7 @@
         </ImageButton>
         <Label
             x:Name="lblMosse"
-            Text="Mosse: "
+            Text="Mosse: 0"
             Grid.Row="4"
             Grid.Column="0"
             TextColor="Black"
@@ -403,7 +403,7 @@
             VerticalTextAlignment="Center"/>
         <Label
             x:Name="lblCoppieTrovate"
-            Text="Coppie trovate: "
+            Text="Coppie trovate: 0"
             Grid.Row="4"
             Grid.Column="1"
             TextColor="Black"
@@ -412,7 +412,7 @@
             VerticalTextAlignment="Center"/>
         <Label
             x:Name="lblTempo"
-            Text="Tempo: "
+            Text="Tempo: 00:00"
             Grid.Row="4"
             Grid.Column="2"
             TextColor="Black"
@@ -428,6 +428,7 @@
             FontSize="18"
             Grid.Row="4"
             Grid.Column="3"
+            Grid.ColumnSpan="2"
             Clicked="StopGame"
             CornerRadius="15"
             WidthRequest="235"
@@ -440,7 +441,7 @@
             FontFamily="TimesNewRoman"
             FontSize="18"
             Grid.Row="4"
-            Grid.Column="4"
+            Grid.Column="5"
             Clicked="ChangeTheme"
             CornerRadius="15"
             WidthRequest="150"

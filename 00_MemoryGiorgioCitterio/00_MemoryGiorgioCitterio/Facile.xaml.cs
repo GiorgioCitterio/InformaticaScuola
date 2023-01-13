@@ -18,7 +18,7 @@ public partial class Facile : ContentPage
     public Stopwatch sw = new Stopwatch();
     public int rigaCorrente;
     public int colonnaCorrente;
-    public int secondi = 120;
+    public int secondi = 90;
     public bool vittoria = false;
     public bool esegui = true;
     public Facile()
@@ -146,15 +146,15 @@ public partial class Facile : ContentPage
     {
         await Navigation.PopAsync();
     }
+    private async void ChangeTheme(object sender, EventArgs e)
+    {
+        await Navigation.PopToRootAsync();
+    }
     public static class Dati
     {
         public static int mosseImpiegate { get; set; }
         public static TimeSpan tempoImpiegato { get; set; }
         public static DateTime data { get; set; }
         public static Tema tema { get; set; }
-    }
-    private async void ChangeTheme(object sender, EventArgs e)
-    {
-        await Navigation.PopToRootAsync();
     }
 }
