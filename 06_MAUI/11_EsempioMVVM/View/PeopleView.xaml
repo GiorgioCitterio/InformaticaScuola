@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_11_EsempioMVVM.View.PeopleView"
+             Title="PeopleView">
+    <CollectionView ItemsSource="{Binding People}" SelectionMode="Multiple">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout>
+                    <Frame
+                        BorderColor="Red"
+                        Margin="20"
+                        BackgroundColor="Green"
+                        CornerRadius="10"
+                        HeightRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand">
+                        <Label
+                            Text="{Binding Name}"
+                            FontSize="15"
+                            TextColor="Yellow">
+                            
+                        </Label>
+                    </Frame>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
