@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09_EsempioView", "09_Esempi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_DataBinding", "10_DataBinding\10_DataBinding.csproj", "{1431FD6D-9490-489C-BDCC-87501C5EEE26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_EsempioMVVM", "11_EsempioMVVM\11_EsempioMVVM.csproj", "{6F8E2534-1056-4F1F-A486-AEA510413B08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_EsempioMVVM", "11_EsempioMVVM\11_EsempioMVVM.csproj", "{6F8E2534-1056-4F1F-A486-AEA510413B08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_Lezione6", "12_Lezione6\12_Lezione6.csproj", "{531CB825-D5B3-4D7C-A773-5DD9963D0702}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,12 @@ Global
 		{6F8E2534-1056-4F1F-A486-AEA510413B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F8E2534-1056-4F1F-A486-AEA510413B08}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6F8E2534-1056-4F1F-A486-AEA510413B08}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{531CB825-D5B3-4D7C-A773-5DD9963D0702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{531CB825-D5B3-4D7C-A773-5DD9963D0702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{531CB825-D5B3-4D7C-A773-5DD9963D0702}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{531CB825-D5B3-4D7C-A773-5DD9963D0702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{531CB825-D5B3-4D7C-A773-5DD9963D0702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{531CB825-D5B3-4D7C-A773-5DD9963D0702}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
