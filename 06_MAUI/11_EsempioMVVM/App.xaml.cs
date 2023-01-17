@@ -7,7 +7,7 @@ namespace _11_EsempioMVVM
         public App()
         {
             InitializeComponent();
-            MainPage = new PeopleView1();
+            MainPage = new ViewClock();
         }
     }
 }
