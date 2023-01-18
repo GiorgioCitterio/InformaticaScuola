@@ -7,7 +7,7 @@ namespace _11_EsempioMVVM
         public App()
         {
             InitializeComponent();
-            MainPage = new WiewHsl();
+            MainPage = new KeyPadView();
         }
     }
 }
