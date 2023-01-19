@@ -1,4 +1,6 @@
-﻿namespace SimpleMVVM
+﻿using SimpleMVVM.View;
+
+namespace SimpleMVVM
 {
     public partial class App : Application
     {
@@ -7,9 +9,9 @@
             InitializeComponent();
 
             //MainPage = new DateTimePage();
-            // MainPage = new ViewClock();
+            MainPage = new ViewClock();
             //MainPage = new ViewHsl();
-            MainPage = new KeyPadView();
+            //MainPage = new KeyPadView();
         }
     }
 }

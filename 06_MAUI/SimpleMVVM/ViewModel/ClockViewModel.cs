@@ -1,25 +1,13 @@
-﻿using System.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
 namespace SimpleMVVM.ViewModel
 {
-    class ClockViewModel : INotifyPropertyChanged
+    public partial class ClockViewModel : ObservableObject
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        [ObservableProperty]
         private DateTime _dateTime;
         private Timer _timer;
-        public DateTime DateTime
-        {
-            get => _dateTime;
-            set
-            {
-                if (_dateTime != value)
-                {
-                    _dateTime = value;
-                    OnPropertyChanged(); // reports this property
-                }
-            }
-        }
         public ClockViewModel()
         {
             this.DateTime = DateTime.Now;
@@ -29,8 +17,6 @@ namespace SimpleMVVM.ViewModel
         }
         ~ClockViewModel() =>
             _timer.Dispose();
-        public void OnPropertyChanged([CallerMemberName] string name = "") =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
 }
 
