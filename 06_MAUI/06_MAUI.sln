@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_DataBinding", "10_DataBi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_EsempioMVVM", "11_EsempioMVVM\11_EsempioMVVM.csproj", "{6F8E2534-1056-4F1F-A486-AEA510413B08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMVVM", "SimpleMVVM\SimpleMVVM.csproj", "{793F07DF-0FF8-4137-A54F-ADFB22E028A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,12 @@ Global
 		{6F8E2534-1056-4F1F-A486-AEA510413B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F8E2534-1056-4F1F-A486-AEA510413B08}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6F8E2534-1056-4F1F-A486-AEA510413B08}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{793F07DF-0FF8-4137-A54F-ADFB22E028A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{793F07DF-0FF8-4137-A54F-ADFB22E028A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{793F07DF-0FF8-4137-A54F-ADFB22E028A9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{793F07DF-0FF8-4137-A54F-ADFB22E028A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{793F07DF-0FF8-4137-A54F-ADFB22E028A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{793F07DF-0FF8-4137-A54F-ADFB22E028A9}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
