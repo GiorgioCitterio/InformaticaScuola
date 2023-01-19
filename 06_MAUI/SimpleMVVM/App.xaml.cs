@@ -6,7 +6,10 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            //MainPage = new DateTimePage();
+            // MainPage = new ViewClock();
+            //MainPage = new ViewHsl();
+            MainPage = new KeyPadView();
         }
     }
 }

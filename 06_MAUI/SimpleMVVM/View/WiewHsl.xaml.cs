@@ -1,4 +1,4 @@
-namespace _11_EsempioMVVM.View;
+namespace SimpleMVVM.View;
 
 public partial class WiewHsl : ContentPage
 {
