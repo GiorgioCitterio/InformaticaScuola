@@ -9,8 +9,8 @@ namespace SimpleMVVM
             InitializeComponent();
 
             //MainPage = new DateTimePage();
-            MainPage = new ViewClock();
-            //MainPage = new ViewHsl();
+            //MainPage = new ViewClock();
+            MainPage = new WiewHsl();
             //MainPage = new KeyPadView();
         }
     }

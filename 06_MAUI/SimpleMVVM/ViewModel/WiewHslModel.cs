@@ -1,11 +1,12 @@
-﻿using System.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 namespace SimpleMVVM.ViewModel
 {
-    class HslViewModel : INotifyPropertyChanged
+    [INotifyPropertyChanged]
+    public partial class HslViewModel //: INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
+        //public event PropertyChangedEventHandler PropertyChanged;
         private float _hue, _saturation, _luminosity;
         private Color _color;
         public float Hue
@@ -54,7 +55,7 @@ namespace SimpleMVVM.ViewModel
                 }
             }
         }
-        public void OnPropertyChanged([CallerMemberName] string name = "") =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        //public void OnPropertyChanged([CallerMemberName] string name = "") =>
+        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
 }
