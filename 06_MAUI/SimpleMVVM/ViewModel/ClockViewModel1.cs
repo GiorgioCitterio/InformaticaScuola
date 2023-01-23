@@ -1,20 +1,20 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+
 namespace SimpleMVVM.ViewModel
 {
-    public partial class ClockViewModel : ObservableObject
+    public partial class ClockViewModel1 : ObservableObject
     {
         [ObservableProperty]
-        private DateTime _dateTime;
-        private Timer _timer;
-        public ClockViewModel()
+        DateTime _dateTime;
+        Timer _timer;
+
+        public ClockViewModel1()
         {
             this.DateTime = DateTime.Now;
-            // Update the DateTime property every second.
             _timer = new Timer(new TimerCallback((s) => this.DateTime = DateTime.Now),
                                null, TimeSpan.Zero, TimeSpan.FromSeconds(1));
         }
-        ~ClockViewModel() =>
+        ~ClockViewModel1() =>
             _timer.Dispose();
     }
 }
-

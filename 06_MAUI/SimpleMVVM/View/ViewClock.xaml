@@ -5,7 +5,7 @@
              x:Class="SimpleMVVM.View.ViewClock"
              Title="ViewClock">
     <ContentPage.BindingContext>
-        <local:ClockViewModel></local:ClockViewModel>
+        <local:ClockViewModel1></local:ClockViewModel1>
     </ContentPage.BindingContext>
     <Label
         Text="{Binding DateTime, StringFormat='{0:T}'}"
