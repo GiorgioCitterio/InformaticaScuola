@@ -11,6 +11,6 @@
         Text="{Binding DateTime, StringFormat='{0:T}'}"
         FontSize="18"
         HorizontalOptions="Center"
-        VerticalOptions="Center" 
+        VerticalOptions="Center"
         />
 </ContentPage>
