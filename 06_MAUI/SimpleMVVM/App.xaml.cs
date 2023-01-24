@@ -10,8 +10,8 @@ namespace SimpleMVVM
 
             //MainPage = new DateTimePage();
             //MainPage = new ViewClock();
-            MainPage = new WiewHsl();
-            //MainPage = new KeyPadView();
+            //MainPage = new WiewHsl();
+            MainPage = new KeyPadView();
         }
     }
 }
