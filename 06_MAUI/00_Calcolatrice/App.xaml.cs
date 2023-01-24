@@ -1,4 +1,6 @@
-﻿namespace _00_Calcolatrice
+﻿using _00_Calcolatrice.View;
+
+namespace _00_Calcolatrice
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new CalculatorView();
         }
     }
 }
