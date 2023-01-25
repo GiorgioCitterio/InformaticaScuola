@@ -85,13 +85,17 @@ namespace SimpleMVVM.ViewModel
     #endregion
 
     #region esempioNuovo
-    [ObservableObject]
-    public partial class KeypadViewModel
+    //[ObservableObject]
+    public partial class KeypadViewModel : ObservableObject
     {
+
+
         private string _inputString = "";
         [ObservableProperty]
         private string _displayText = "";
         private char[] _specialChars = { '*', '#' };
+
+
 
         public string InputString
         {
@@ -103,41 +107,56 @@ namespace SimpleMVVM.ViewModel
                     _inputString = value;
                     OnPropertyChanged();
                     DisplayText = FormatText(_inputString);
-
+                    DeleteCharCommand.NotifyCanExecuteChanged();
                     // Perhaps the delete button must be enabled/disabled.
-                    ((Command)DeleteCharCommand).ChangeCanExecute();
+                    //((Command)DeleteCharCommand).ChangeCanExecute();
                 }
             }
         }
-        public string DisplayText
-        {
-            get => _displayText;
-            private set
-            {
-                if (_displayText != value)
-                {
-                    _displayText = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
+
+        //public string DisplayText
+        //{
+        //    get => _displayText;
+        //    private set
+        //    {
+        //        if (_displayText != value)
+        //        {
+        //            _displayText = value;
+        //            OnPropertyChanged();
+        //        }
+        //    }
+        //}
+
         [RelayCommand]
         void AddChar(string key)
         {
-            InputString = key;
+            InputString += key;
         }
-        [RelayCommand(CanExecute =nameof())]
-        void DeleteChar(string key)
+        [RelayCommand]
+        void DelDisplay()
         {
-
+            InputString = "";
+        }
+        [RelayCommand(CanExecute = nameof(CanDelete))]
+        void DeleteChar()
+        {
+            InputString = InputString.Substring(0, InputString.Length - 1);
+        }
+        bool CanDelete()
+        {
+            return InputString.Length > 0;
         }
         string FormatText(string str)
         {
             bool hasNonNumbers = str.IndexOfAny(_specialChars) != -1;
             string formatted = str;
 
+            // Format the string based on the type of data and the length
             if (hasNonNumbers || str.Length < 4 || str.Length > 10)
-            { }
+            {
+                // Special characters exist, or the string is too small or large for special formatting
+                // Do nothing
+            }
 
             else if (str.Length < 8)
                 formatted = string.Format("{0}-{1}", str.Substring(0, 3), str.Substring(3));
@@ -147,6 +166,10 @@ namespace SimpleMVVM.ViewModel
 
             return formatted;
         }
+
+
+        //public void OnPropertyChanged([CallerMemberName] string name = "") =>
+        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
     #endregion
 }

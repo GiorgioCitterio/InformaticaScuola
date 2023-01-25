@@ -14,6 +14,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80" />
@@ -43,5 +44,9 @@
         <Button Text="*" Command="{Binding AddCharCommand}" CommandParameter="*" Grid.Row="4" />
         <Button Text="0" Command="{Binding AddCharCommand}" CommandParameter="0" Grid.Row="4" Grid.Column="1" />
         <Button Text="#" Command="{Binding AddCharCommand}" CommandParameter="#" Grid.Row="4" Grid.Column="2" />
+
+        <Button Text="Del" Command="{Binding DelDisplayCommand}" CommandParameter="Del" Grid.Row="5" />
+        <!--<Button Text="0" Command="{Binding AddCharCommand}" CommandParameter="0" Grid.Row="5" Grid.Column="1" />
+        <Button Text="#" Command="{Binding AddCharCommand}" CommandParameter="#" Grid.Row="5" Grid.Column="2" />-->
     </Grid>
 </ContentPage>
