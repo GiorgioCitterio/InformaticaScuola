@@ -5,7 +5,7 @@
              x:Class="SimpleMVVM.KeyPadView"
              Title="KeyPadView">
     <ContentPage.BindingContext>
-        <local:KeypadViewModel />
+        <local:KeypadViewModel/>
     </ContentPage.BindingContext>
     <Grid HorizontalOptions="Center" VerticalOptions="Center">
         <Grid.RowDefinitions>

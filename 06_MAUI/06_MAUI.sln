@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_EsempioMVVM", "11_Esempi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleMVVM", "SimpleMVVM\SimpleMVVM.csproj", "{793F07DF-0FF8-4137-A54F-ADFB22E028A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00_Calcolatrice", "00_Calcolatrice\00_Calcolatrice.csproj", "{E941ECF3-5430-47C4-8B7E-54130CA366E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "00_Calcolatrice", "00_Calcolatrice\00_Calcolatrice.csproj", "{E941ECF3-5430-47C4-8B7E-54130CA366E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_TabShellLayout", "12_TabShellLayout\12_TabShellLayout.csproj", "{B1A43F94-78BF-4AA2-8C63-7BB92850E60A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +91,12 @@ Global
 		{E941ECF3-5430-47C4-8B7E-54130CA366E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E941ECF3-5430-47C4-8B7E-54130CA366E2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E941ECF3-5430-47C4-8B7E-54130CA366E2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B1A43F94-78BF-4AA2-8C63-7BB92850E60A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1A43F94-78BF-4AA2-8C63-7BB92850E60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1A43F94-78BF-4AA2-8C63-7BB92850E60A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B1A43F94-78BF-4AA2-8C63-7BB92850E60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1A43F94-78BF-4AA2-8C63-7BB92850E60A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1A43F94-78BF-4AA2-8C63-7BB92850E60A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
