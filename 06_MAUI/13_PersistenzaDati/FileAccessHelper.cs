@@ -4,6 +4,7 @@
     {
         public static string GetFileLocalPath(string dbname)
         {
+            //percorso completo del databse
             return Path.Combine(FileSystem.AppDataDirectory, dbname);
         }
     }

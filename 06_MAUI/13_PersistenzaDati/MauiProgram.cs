@@ -18,7 +18,10 @@ namespace _13_PersistenzaDati
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
-
+            string dbPath = FileAccessHelper.GetFileLocalPath("Dati.db3"); //prendo percorso del db
+            builder.Services.AddSingleton<PersonRepository>(s => 
+            ActivatorUtilities.CreateInstance<PersonRepository>(s, dbPath));
+            //fa un'iniezione delle dipendenze
             return builder.Build();
         }
     }
