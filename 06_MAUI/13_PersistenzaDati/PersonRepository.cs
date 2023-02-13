@@ -52,6 +52,7 @@ namespace _13_PersistenzaDati
             {
                 await Init(); //mi aggancio al db
                 var lista = await connection.Table<Person>().ToListAsync(); //va nella tabella e restituisce una lista di persone
+                //connection.DeleteAsync(persona); rimuove la persona passata utilizzando la chiave primaria
                 return lista; //se funziona ritorno la lista
             }
             catch (Exception e)

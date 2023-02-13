@@ -1,4 +1,5 @@
-﻿namespace _13_PersistenzaDati
+﻿using _13_PersistenzaDati.Model;
+namespace _13_PersistenzaDati
 {
     public partial class MainPage : ContentPage
     {
@@ -17,7 +18,9 @@
 
         private async void GetPeople_Clicked(object sender, EventArgs e)
         {
-            List<Person> people;
+            //prende la lista di persone
+            List<Person> people = await App.PersonRepo.GetAllPeople();
+            peopleList.ItemsSource= people; //aggancio alla collection view la lista di persone
         }
     }
 }

@@ -7,5 +7,15 @@
         <Button x:Name="Inserisci" Clicked="Inserisci_Clicked" Text="Inserire una persona"/>
         <Label x:Name="StatusInserimento" Text="Status inserimento"/>
         <Button x:Name="GetPeople" Clicked="GetPeople_Clicked" Text="Visualizza le persone"/>
+        <CollectionView x:Name="peopleList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding Id}"/>
+                        <Label Text="{Binding Name}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </VerticalStackLayout>
 </ContentPage>
