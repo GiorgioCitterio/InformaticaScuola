@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SettingProxy", "SettingProx
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_UsoProxy", "03_UsoProxy\03_UsoProxy.csproj", "{ECAFC8E1-8675-48D8-B1F3-9984DD8050D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_DownloadFile", "04_DownloadFile\04_DownloadFile.csproj", "{D6DD15C6-6E4E-4246-9974-B58CC65CB530}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04_DownloadFile", "04_DownloadFile\04_DownloadFile.csproj", "{D6DD15C6-6E4E-4246-9974-B58CC65CB530}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_AnalisiHeaders", "05_AnalisiHeaders\05_AnalisiHeaders.csproj", "{19699B1D-41BE-4C00-A0BB-BBA2B3D9BFBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{D6DD15C6-6E4E-4246-9974-B58CC65CB530}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6DD15C6-6E4E-4246-9974-B58CC65CB530}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6DD15C6-6E4E-4246-9974-B58CC65CB530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19699B1D-41BE-4C00-A0BB-BBA2B3D9BFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19699B1D-41BE-4C00-A0BB-BBA2B3D9BFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19699B1D-41BE-4C00-A0BB-BBA2B3D9BFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19699B1D-41BE-4C00-A0BB-BBA2B3D9BFBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
