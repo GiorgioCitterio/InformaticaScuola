@@ -6,7 +6,13 @@ namespace _06_MetodiDiEstensione
         static void Main(string[] args)
         {
             string parola = "ciao        oggi  è lunedì, è una bella giornata! come va  ? f";
+            Console.WriteLine(parola);
             Console.WriteLine(parola.WordCount());
+            List<string> list = new List<string>()
+            {
+                "Pippo",
+                "Pluto",
+            };
         }
     }
 }

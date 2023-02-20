@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05_AnalisiHeaders", "05_Ana
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_MetodiDiEstensione", "06_MetodiDiEstensione\06_MetodiDiEstensione.csproj", "{9973DE83-271A-4837-A60C-4DAFBA9A6E03}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_EsempioJSON", "07_EsempioJSON\07_EsempioJSON.csproj", "{F32A58F8-E981-4476-9916-278D148B8FB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_EsempioSerializzazioneJSON", "08_EsempioSerializzazioneJSON\08_EsempioSerializzazioneJSON.csproj", "{06EC8E32-ACE0-403D-BD4D-AD5F5A3688B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{9973DE83-271A-4837-A60C-4DAFBA9A6E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9973DE83-271A-4837-A60C-4DAFBA9A6E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9973DE83-271A-4837-A60C-4DAFBA9A6E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F32A58F8-E981-4476-9916-278D148B8FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F32A58F8-E981-4476-9916-278D148B8FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F32A58F8-E981-4476-9916-278D148B8FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F32A58F8-E981-4476-9916-278D148B8FB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06EC8E32-ACE0-403D-BD4D-AD5F5A3688B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06EC8E32-ACE0-403D-BD4D-AD5F5A3688B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06EC8E32-ACE0-403D-BD4D-AD5F5A3688B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06EC8E32-ACE0-403D-BD4D-AD5F5A3688B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
