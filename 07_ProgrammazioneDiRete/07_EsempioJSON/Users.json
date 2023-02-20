@@ -1,0 +1,41 @@
+{
+    "Pippo" : {
+      "login"  : "Pippo@test.it",
+      "location"  : "Italia",
+      "online"    : true,
+      "followers" : 987
+    },
+    "Pluto" : {
+      "username"  : "Pluto@test.com",
+      "location"  : "India",
+      "online"    : false,
+      "followers" : 9024,
+      "Scuola":{
+        "name":"Fumagalli",
+        "location":"Casatenovo",
+        "numeroStudenti":2500
+        },
+      "SitoWeb":[
+        {
+            "url":"www.pluto.net",
+            "AccessFree":true
+        },
+        {
+            "url":"www.plutone.it",
+            "AccessFree":false
+        }
+      ]
+    },
+    "Drew" : {
+      "username"  : "DrewSquid",
+      "location"  : "Atlantic Ocean",
+      "online"    : false,
+      "followers" : 321,
+      "Scuola":{
+        "name":"Greppi",
+        "location":"Monticello",
+        "numeroStudenti":1500
+        }
+    }
+}
+  
