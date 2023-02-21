@@ -2,6 +2,7 @@
 
 namespace _08_EsempioSerializzazioneJSON
 {
+    //classe come modello di dati
     public class WeatherForecast
     {
         public DateTimeOffset Date { get; set; }
@@ -25,15 +26,24 @@ namespace _08_EsempioSerializzazioneJSON
                 TemperatureCelsius = 30,
                 Summary = "Very Hot"
             };
+            //lista di oggetti
             List<WeatherForecast> previsioni = new() { weatherForecast, weatherForecast2 };
             //serializzazione: da oggetto .NET a oggetto JSON
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            string jsonString = JsonSerializer.Serialize(weatherForecast, options);
-
+            var options = new JsonSerializerOptions { WriteIndented = true }; //opzione per indentare json
+            string jsonString = JsonSerializer.Serialize(previsioni, options); //serializza e restituisce una stringa
+            Console.WriteLine(jsonString);
+            //serializza su file
+            string nomeFile = "Previsione.json";
+            FileStream fileStream = File.Create(nomeFile);
+            JsonSerializer.Serialize(fileStream, previsioni, options);
+            await fileStream.DisposeAsync();
+            //leggo il file serializzato
+            Console.WriteLine("file letto da disco");
+            Console.WriteLine(await File.ReadAllTextAsync(nomeFile));
         }
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            await JsonDemoAsync();
         }
     }
 }
