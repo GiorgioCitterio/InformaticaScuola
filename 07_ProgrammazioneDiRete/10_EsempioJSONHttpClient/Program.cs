@@ -39,16 +39,23 @@ namespace _10_EsempioJSONHttpClient
             List<Todo>? todoList = await client.GetFromJsonAsync<List<Todo>>("/todos");
             //todoList?.ForEach(todoList => Console.WriteLine(todoList));
             var options = new JsonSerializerOptions { WriteIndented= true };
-            string nomeFile = "todos.json";
+            string nomeFile = "..\\..\\..\\todos.json";
             FileStream fileStream = File.Create(nomeFile);
             await JsonSerializer.SerializeAsync(fileStream, todoList, options);
-            await fileStream.DisposeAsync();
+            await fileStream.DisposeAsync();    
+        }
+
+        static async Task ReadJsonAsync()
+        {
+            string nomeFile = "..\\..\\..\\todos.json";
+            Console.WriteLine(await File.ReadAllTextAsync(nomeFile));
         }
 
         static async Task Main(string[] args)
         {
             //await DeserializzaJsonAsync();
             await SalvaToDoListAsync();
+            await ReadJsonAsync();
         }
     }
 }
