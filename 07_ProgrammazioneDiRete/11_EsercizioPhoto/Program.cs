@@ -1,10 +1,26 @@
-﻿namespace _11_EsercizioPhoto
+﻿using _11_EsercizioPhoto.Model;
+using SettingProxy;
+using System.Net.Http.Json;
+using System.Text.Json;
+namespace _11_EsercizioPhoto
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        static HttpClient client;
+        static async Task DeserializzaJsonAsync()
         {
-            Console.WriteLine("Hello, World!");
+            MyProxy.HttpClientProxySetup(out client);
+            client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/photos");
+            List<Photo>? photos = await client.GetFromJsonAsync<List<Photo>>("photos");
+            var ultimePhoto = photos?.Skip(Math.Max(0, photos.Count() - 10));
+            foreach (var item in ultimePhoto)
+            {
+                Console.WriteLine(item);
+            } 
+        }
+        static async Task Main(string[] args)
+        {
+           await DeserializzaJsonAsync();
         }
     }
 }
