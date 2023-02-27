@@ -15,8 +15,9 @@ namespace _11_EsercizioPhoto
             List<Photo>? firstPhotos = new List<Photo>(10);
             for (int i = 0; i < firstPhotos.Count; i++)
             {
-                firstPhotos[i] = photos[i];
+                firstPhotos.Add(photos[i]);
             }
+            firstPhotos.ForEach(photo => Console.WriteLine(photo));
             List<Photo>? cachedPhotos = new List<Photo>();
             foreach (Photo photo in photos)
             {
