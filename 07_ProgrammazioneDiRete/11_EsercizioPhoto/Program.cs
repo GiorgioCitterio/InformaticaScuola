@@ -1,7 +1,7 @@
 ﻿using _11_EsercizioPhoto.Model;
 using SettingProxy;
 using System.Net.Http.Json;
-using System.Text.Json;
+
 namespace _11_EsercizioPhoto
 {
     public class Program
@@ -12,11 +12,23 @@ namespace _11_EsercizioPhoto
             MyProxy.HttpClientProxySetup(out client);
             client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/photos");
             List<Photo>? photos = await client.GetFromJsonAsync<List<Photo>>("photos");
-            var ultimePhoto = photos?.Skip(Math.Max(0, photos.Count() - 10));
-            foreach (var item in ultimePhoto)
+            List<Photo>? firstPhotos = new List<Photo>(10);
+            for (int i = 0; i < firstPhotos.Count; i++)
             {
-                Console.WriteLine(item);
-            } 
+                firstPhotos[i] = photos[i];
+            }
+            List<Photo>? cachedPhotos = new List<Photo>();
+            foreach (Photo photo in photos)
+            {
+                string fileName = Path.GetFileName(photo.url);
+                string filePath = Path.Combine("cachedPhotos", fileName);
+                photo.url = filePath;
+                fileName = Path.GetFileName(photo.thumbnailUrl);
+                filePath = Path.Combine("cachedThumbnails", fileName);
+                photo.thumbnailUrl = filePath;
+                cachedPhotos.Add(photo);
+            }
+            cachedPhotos.ForEach(photo => Console.WriteLine(photo));
         }
         static async Task Main(string[] args)
         {
