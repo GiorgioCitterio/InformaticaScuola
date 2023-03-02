@@ -12,12 +12,6 @@ namespace _11_EsercizioPhoto
             MyProxy.HttpClientProxySetup(out client);
             client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/photos");
             List<Photo>? photos = await client.GetFromJsonAsync<List<Photo>>("photos");
-            List<Photo>? firstPhotos = new List<Photo>(10);
-            for (int i = 0; i < firstPhotos.Count; i++)
-            {
-                firstPhotos.Add(photos[i]);
-            }
-            firstPhotos.ForEach(photo => Console.WriteLine(photo));
             List<Photo>? cachedPhotos = new List<Photo>();
             foreach (Photo photo in photos)
             {

@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09_DeserializzazioneJSON", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_EsempioJSONHttpClient", "10_EsempioJSONHttpClient\10_EsempioJSONHttpClient.csproj", "{DE255F54-03FC-4023-9FDF-A0E953BCD8AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_EsercizioPhoto", "11_EsercizioPhoto\11_EsercizioPhoto.csproj", "{C3072B8A-A84B-4A2C-A9A4-A6472E11F341}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_EsercizioPhoto", "11_EsercizioPhoto\11_EsercizioPhoto.csproj", "{C3072B8A-A84B-4A2C-A9A4-A6472E11F341}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_GithubAPIClient", "11_GithubAPIClient\11_GithubAPIClient.csproj", "{F52C48BC-E38F-4CD3-B69E-ED4581342ABD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{C3072B8A-A84B-4A2C-A9A4-A6472E11F341}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3072B8A-A84B-4A2C-A9A4-A6472E11F341}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3072B8A-A84B-4A2C-A9A4-A6472E11F341}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F52C48BC-E38F-4CD3-B69E-ED4581342ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F52C48BC-E38F-4CD3-B69E-ED4581342ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F52C48BC-E38F-4CD3-B69E-ED4581342ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F52C48BC-E38F-4CD3-B69E-ED4581342ABD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
