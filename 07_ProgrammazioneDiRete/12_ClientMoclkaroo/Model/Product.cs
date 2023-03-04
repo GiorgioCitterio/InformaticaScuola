@@ -12,5 +12,10 @@ namespace _12_ClientMoclkaroo.Model
         public float Price { get; set; }
         [JsonPropertyName("company_id")]
         public int CompanyID { get; set; }
+
+        public override string? ToString()
+        {
+            return Id + " " + Name + " " + Price + " " + CompanyID;
+        }
     }
 }
