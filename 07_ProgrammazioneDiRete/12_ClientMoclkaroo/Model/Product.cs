@@ -15,7 +15,7 @@ namespace _12_ClientMoclkaroo.Model
 
         public override string? ToString()
         {
-            return Id + " " + Name + " " + Price + " " + CompanyID;
+            return "id: " + Id + " nome: " + Name + " prezzo: " + Price + " id-compagnia: " + CompanyID;
         }
     }
 }
