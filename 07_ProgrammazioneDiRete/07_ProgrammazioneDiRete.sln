@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_EsercizioPhoto", "11_Ese
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_GithubAPIClient", "11_GithubAPIClient\11_GithubAPIClient.csproj", "{F52C48BC-E38F-4CD3-B69E-ED4581342ABD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_ClientMockaroo", "12_ClientMoclkaroo\12_ClientMockaroo.csproj", "{5C8606D7-AF20-4BC4-AC90-9D3271D361EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_ClientMockaroo", "12_ClientMoclkaroo\12_ClientMockaroo.csproj", "{5C8606D7-AF20-4BC4-AC90-9D3271D361EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13_ClientMockApiPostman", "13_ClientMockApiPostman\13_ClientMockApiPostman.csproj", "{C67EFAD4-F992-4A6A-95F8-84AA83084C80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{5C8606D7-AF20-4BC4-AC90-9D3271D361EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C8606D7-AF20-4BC4-AC90-9D3271D361EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C8606D7-AF20-4BC4-AC90-9D3271D361EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C67EFAD4-F992-4A6A-95F8-84AA83084C80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C67EFAD4-F992-4A6A-95F8-84AA83084C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C67EFAD4-F992-4A6A-95F8-84AA83084C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C67EFAD4-F992-4A6A-95F8-84AA83084C80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
