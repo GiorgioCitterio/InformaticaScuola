@@ -6,7 +6,6 @@ namespace _14_EsempioPrevisioni.Model
     {
         public Coord? Coord { get; set; }
         public Weather[]? Weather { get; set; }
-        [JsonPropertyName("_base")]
         public string? Base { get; set; }
         public Main? Main { get; set; }
         public int? Visibility { get; set; }
