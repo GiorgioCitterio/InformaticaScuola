@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:MvvmSpiegazione.ModelView"
+             xmlns:model="clr-namespace:MvvmSpiegazione.Model"
+             x:Class="MvvmSpiegazione.MainPage">
+
+    <!-- Imposta il ViewModel come contesto di binding della pagina -->
+    <ContentPage.BindingContext>
+        <viewModel:PersonModelView/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <!-- Utilizza un CollectionView per mostrare la lista di oggetti "Person" -->
+            <CollectionView ItemsSource="{Binding People}">
+                <!-- Imposta il DataTemplate per visualizzare ogni oggetto "Person" -->
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Person">
+                        <!-- Utilizza un Frame con un VerticalStackLayout e delle Label per mostrare le proprietà dell'oggetto "Person" -->
+                        <Frame BackgroundColor="Green" HeightRequest="200" WidthRequest="200">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Name, StringFormat='Nome: {0:F0}'}"/>
+                                <Label Text="{Binding Surname, StringFormat='Cognome: {0:F0}'}"/>
+                                <Label Text="{Binding Age, StringFormat='Eta: {0:F0}'}"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Utilizza una Entry per permettere all'utente di aggiungere nuovi oggetti tramite il comando "AddItemCommand" -->
+            <Entry Text="{Binding Text}" Placeholder="Formato nome;cognome;eta" WidthRequest="200" HeightRequest="30" BackgroundColor="White" TextColor="Black" Margin="20" ReturnCommand="{Binding AddItemCommand}"/>
+
+            <!-- Utilizza un Button per permettere all'utente di aggiungere nuovi oggetti tramite il comando "AddItemCommand" -->
+            <!--<Button Text="Aggiungi Oggetto" WidthRequest="100" HeightRequest="40" BackgroundColor="Blue" Command="{Binding AddItemCommand}"/>-->
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
