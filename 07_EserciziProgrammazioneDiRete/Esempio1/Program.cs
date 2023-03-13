@@ -1,8 +1,5 @@
 ﻿using Esempio1.Model;
 using System.Text.Json;
-using SettingProxy;
-using System.Runtime.InteropServices;
-using System.Net.Http.Json;
 
 namespace Esempio1
 {
@@ -28,13 +25,12 @@ namespace Esempio1
 
         private static void ShowPerson(Person person)
         {
-            Console.WriteLine(person.FirstName + " "+person.LastName+" "+person.Email+" "+person.Id);
+            Console.WriteLine(person.FirstName + " " + person.LastName + " " + person.Email + " " + person.Id);
         }
 
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            MyProxy.HttpClientProxySetup(out client);
-            RunAsync();
+            await RunAsync();
         }
         static async Task RunAsync()
         {
