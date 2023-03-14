@@ -2,7 +2,7 @@
 
 namespace _14_EsempioPrevisioni.Model
 {
-    public class Forecast
+    public class CurrentForecast
     {
         public Coord? Coord { get; set; }
         public Weather[]? Weather { get; set; }
