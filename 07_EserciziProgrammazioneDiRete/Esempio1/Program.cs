@@ -1,4 +1,5 @@
 ﻿using Esempio1.Model;
+using System.Data;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text.Json;
@@ -26,10 +27,24 @@ namespace Esempio1
             var httpResponseMessage = await client.PostAsJsonAsync("/Esempio1.json", person);
             if(httpResponseMessage.IsSuccessStatusCode)
             {
-                Person pNuova = await httpResponseMessage.Content.ReadFromJsonAsync<Person>();
+                Person? pNuova = await httpResponseMessage.Content.ReadFromJsonAsync<Person>();
                 ShowPerson(pNuova);
             }
         }
+        static async Task PutPersonAsync(Person person)
+        {
+            HttpResponseMessage responseMessage = await client.PutAsJsonAsync<Person>($"/Esempio1/:{person.Id}.json",person);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                Person? pCreata = await responseMessage.Content.ReadFromJsonAsync<Person>();
+                Console.WriteLine(pCreata);
+            }
+        }
+        static async Task DeletePersonAsync(Person person)
+        {
+            HttpResponseMessage response = await client.DeleteAsync($"/Esempio1/:{person.Id}.json");
+        }
+
         private static void ShowPersons(List<Person> people)
         {
             people.ForEach(person => ShowPerson(person));
@@ -49,16 +64,16 @@ namespace Esempio1
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(acceptedMediaType));
             client.DefaultRequestHeaders.Add(APIKeyName, APIKeyValue);
-            var persons = await GetPersonsAsync(PATH);
-            ShowPersons(persons);
+            //var persons = await GetPersonsAsync(PATH);
+            //ShowPersons(persons);
             Person p = new Person()
             {
                 Email = "df",
                 FirstName = "sa",
-                LastName = "dfs",
                 Id = 1
             };
             await PostPersonAsync(p);
+            //await PutPersonAsync(p);
         }
         private static MockarooStore GetKeyFromJsonStore()
         {

@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13_ClientMockApiPostman", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14_EsempioPrevisioni", "14_EsempioPrevisioni\14_EsempioPrevisioni.csproj", "{6BD4FB02-19BC-450D-B284-B549363C52E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15_EsempioBingMaps", "15_EsempioBingMaps\15_EsempioBingMaps.csproj", "{E73EAF61-67B7-4283-BC5A-5B65D8E76302}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "15_EsempioBingMaps", "15_EsempioBingMaps\15_EsempioBingMaps.csproj", "{E73EAF61-67B7-4283-BC5A-5B65D8E76302}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16_EsempioWikipedia", "16_EsempioWikipedia\16_EsempioWikipedia.csproj", "{58C36A81-0B7E-4538-9BBA-2830A7B6D2A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{E73EAF61-67B7-4283-BC5A-5B65D8E76302}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E73EAF61-67B7-4283-BC5A-5B65D8E76302}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E73EAF61-67B7-4283-BC5A-5B65D8E76302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58C36A81-0B7E-4538-9BBA-2830A7B6D2A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58C36A81-0B7E-4538-9BBA-2830A7B6D2A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58C36A81-0B7E-4538-9BBA-2830A7B6D2A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58C36A81-0B7E-4538-9BBA-2830A7B6D2A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

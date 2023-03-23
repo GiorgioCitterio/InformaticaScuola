@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Esempio1", "Esempio1\Esempio1.csproj", "{F08F9541-0E40-4788-823D-D9BCECA8901C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Esempio1", "Esempio1\Esempio1.csproj", "{F08F9541-0E40-4788-823D-D9BCECA8901C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeserializzazioneJson", "DeserializzazioneJson\DeserializzazioneJson.csproj", "{0B318FE7-04FE-4064-BFE1-0AF7F3AE3F17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadFile", "DownloadFile\DownloadFile.csproj", "{BA89560F-7121-4420-A3C7-5125F86D5CD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{F08F9541-0E40-4788-823D-D9BCECA8901C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F08F9541-0E40-4788-823D-D9BCECA8901C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F08F9541-0E40-4788-823D-D9BCECA8901C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B318FE7-04FE-4064-BFE1-0AF7F3AE3F17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B318FE7-04FE-4064-BFE1-0AF7F3AE3F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B318FE7-04FE-4064-BFE1-0AF7F3AE3F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B318FE7-04FE-4064-BFE1-0AF7F3AE3F17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA89560F-7121-4420-A3C7-5125F86D5CD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA89560F-7121-4420-A3C7-5125F86D5CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA89560F-7121-4420-A3C7-5125F86D5CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA89560F-7121-4420-A3C7-5125F86D5CD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
