@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cities", "Cities\Cities.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SettingProxy", "SettingProxy\SettingProxy.csproj", "{D8BD7BB4-2FC6-4BF0-BBDB-7FD45E1169C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializzaJSON", "SerializzaJSON\SerializzaJSON.csproj", "{F2CD8327-3E13-4675-B341-13DAC639C14F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerializzaJSON", "SerializzaJSON\SerializzaJSON.csproj", "{F2CD8327-3E13-4675-B341-13DAC639C14F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nfbfoa", "nfbfoa\nfbfoa.csproj", "{211CA460-9300-4A66-B902-B72EE6F7CA3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{F2CD8327-3E13-4675-B341-13DAC639C14F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2CD8327-3E13-4675-B341-13DAC639C14F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2CD8327-3E13-4675-B341-13DAC639C14F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{211CA460-9300-4A66-B902-B72EE6F7CA3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{211CA460-9300-4A66-B902-B72EE6F7CA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{211CA460-9300-4A66-B902-B72EE6F7CA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{211CA460-9300-4A66-B902-B72EE6F7CA3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
