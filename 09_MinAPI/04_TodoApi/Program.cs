@@ -32,6 +32,9 @@ app.UseHttpsRedirection();
 
 
 //qui metto le api
+
+#region API con percorso completo
+
 //sempre asincrono perchè accedo al db e gli passo sempre l'istanza del db
 //metto la rotta, istanza del db
 //prendo tutti gli elementi
@@ -48,7 +51,7 @@ app.MapGet("todoitems/{id}", async (int id, TodoDb db) =>
         ? Results.Ok(todo)
         : Results.NotFound());
 
-//fa la post di un elemento
+//fa la post di un elemento passato
 app.MapPost("/todoitems", async (Todo todo, TodoDb db) =>
 {
     await db.Todos.AddAsync(todo);
@@ -56,7 +59,7 @@ app.MapPost("/todoitems", async (Todo todo, TodoDb db) =>
     return Results.Created($"todoitems/{todo.Id}", todo);
 });
 
-//fa la put di un elemento
+//fa la put di un elemento dato un id e i campi di quell'oggetto da modificare
 app.MapPut("/todoitems/{id}", async (int id, Todo inputTodo, TodoDb db) =>
 {
     var todo = await db.Todos.FindAsync(id);    
@@ -68,6 +71,7 @@ app.MapPut("/todoitems/{id}", async (int id, Todo inputTodo, TodoDb db) =>
     return Results.NoContent();
 });
 
+//fa la delete di un elemento con un determinato id
 app.MapDelete("/todoitems/{id}", async (int id, TodoDb db) =>
 {
     if (await db.Todos.FindAsync(id) is Todo todo)
@@ -78,5 +82,20 @@ app.MapDelete("/todoitems/{id}", async (int id, TodoDb db) =>
     }
     return Results.NotFound();
 });
+
+#endregion
+
+#region API utilizzando rotta predefinita
+
+//var todoItems = app.MapGroup("/todoitems");
+
+//todoItems.MapGet("/", async (TodoDb db) => await db.Todos.ToListAsync());
+
+//todoItems.MapGet("/{id}", async (int id, TodoDb db) =>
+//    await db.Todos.FindAsync(id) is Todo todo
+//        ? Results.Ok(todo)
+//        : Results.NotFound());
+
+#endregion
 
 app.Run();
