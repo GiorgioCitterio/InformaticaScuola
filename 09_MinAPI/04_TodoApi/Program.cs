@@ -6,6 +6,11 @@ var builder = WebApplication.CreateBuilder(args);
 //aggiunge il dbcontext
 builder.Services.AddDbContext<TodoDb>(opt => opt.UseInMemoryDatabase("TodoList"));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+//connection string per db sqlite
+var connectionString = 
+    builder.Configuration.GetConnectionString("Pizzas") ?? "Data Source=DefaultPizzas.db";
+builder.Services.AddDbContext<TodoDb>(options => options.UseSqlite(connectionString));
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
