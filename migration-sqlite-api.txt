@@ -1,0 +1,7 @@
+migration sqlite:
+tools/manage nuget/pm console
+seleziono default project corretto
+
+Add-Migration init
+
+Update-Database
