@@ -5,13 +5,26 @@ var builder = WebApplication.CreateBuilder(args);
 
 //aggiunge il dbcontext per il db in memory
 //builder.Services.AddDbContext<TodoDb>(opt => opt.UseInMemoryDatabase("TodoList"));
-//builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 //connection string per db sqlite, aggiunge dbcontext per db sqlite
-var connectionString = builder.Configuration.GetConnectionString("Pizzas") ?? "Data Source=DefaultPizzas.db";
-builder.Services.AddDbContext<TodoDb>(options => options.UseSqlite(connectionString));
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+//var connectionString = builder.Configuration.GetConnectionString("Pizzas") ?? "Data Source=DefaultPizzas.db";
+//builder.Services.AddDbContext<TodoDb>(options => options.UseSqlite(connectionString));
 
+//connection string per mariadb, aggiunge dbcontext per mariadb
+var connectionString = builder.Configuration.GetConnectionString("TodoConnection"); //metto la chiave del json
+var serverVersion = ServerVersion.AutoDetect(connectionString);
+builder.Services.AddDbContext<TodoDb>(
+        dbContextOptions => dbContextOptions
+            .UseMySql(connectionString, serverVersion)
+            // The following three options help with debugging, but should
+            // be changed or removed for production.
+            .LogTo(Console.WriteLine, LogLevel.Information)
+            .EnableSensitiveDataLogging()
+            .EnableDetailedErrors()
+    );
+
+
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
