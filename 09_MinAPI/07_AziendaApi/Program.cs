@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 //riferimento al db
 var connectionString = builder.Configuration.GetConnectionString("AziendaAPIConnection");
 var serverVersion = ServerVersion.AutoDetect(connectionString);
