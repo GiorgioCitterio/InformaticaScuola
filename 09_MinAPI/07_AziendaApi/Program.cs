@@ -56,5 +56,7 @@ app.UseHttpsRedirection();
 app.MapGet("/", () => "ciao");
 app.MapAziendaEndpoints();
 app.MapProdottoEndPoints();
+app.MapSviluppatoreEndPoints();
+app.MapSviluppaProdottoEndPoints();
 
 app.Run();
