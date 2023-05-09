@@ -32,6 +32,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 //riferimento al db
+/*
 var connectionString = builder.Configuration.GetConnectionString("AziendaAPIConnection");
 var serverVersion = ServerVersion.AutoDetect(connectionString);
 builder.Services.AddDbContext<AziendaDbContext>(
@@ -42,6 +43,13 @@ builder.Services.AddDbContext<AziendaDbContext>(
             .LogTo(Console.WriteLine, LogLevel.Information)
             .EnableSensitiveDataLogging()
             .EnableDetailedErrors());
+*/
+
+//connessione al database nel caso di Microsoft SQL Server
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<AziendaDbContext>(option =>
+    option.UseSqlServer(connectionString));
+
 
 var app = builder.Build();
 

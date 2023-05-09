@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using _07_AziendaApi.Data;
 
@@ -10,9 +11,11 @@ using _07_AziendaApi.Data;
 namespace _07_AziendaApi.Migrations
 {
     [DbContext(typeof(AziendaDbContext))]
-    partial class AziendaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230509102808_ToSQLServerMigration")]
+    partial class ToSQLServerMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
