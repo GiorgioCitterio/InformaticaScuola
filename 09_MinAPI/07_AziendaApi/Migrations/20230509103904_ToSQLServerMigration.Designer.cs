@@ -11,7 +11,7 @@ using _07_AziendaApi.Data;
 namespace _07_AziendaApi.Migrations
 {
     [DbContext(typeof(AziendaDbContext))]
-    [Migration("20230509102808_ToSQLServerMigration")]
+    [Migration("20230509103904_ToSQLServerMigration")]
     partial class ToSQLServerMigration
     {
         /// <inheritdoc />

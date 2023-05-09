@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -8,35 +7,31 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace _07_AziendaApi.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class ToSQLServerMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterDatabase()
-                .Annotation("MySql:CharSet", "utf8mb4");
-
             migrationBuilder.CreateTable(
                 name: "Aziende",
                 columns: table => new
                 {
                     AziendaId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     Indirizzo = table.Column<string>(type: "nvarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Aziende", x => x.AziendaId);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
+                });
 
             migrationBuilder.CreateTable(
                 name: "Prodotti",
                 columns: table => new
                 {
                     ProdottoId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     AziendaId = table.Column<int>(type: "int", nullable: false),
                     Nome = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     Descrizione = table.Column<string>(type: "nvarchar(200)", nullable: true)
@@ -50,15 +45,14 @@ namespace _07_AziendaApi.Migrations
                         principalTable: "Aziende",
                         principalColumn: "AziendaId",
                         onDelete: ReferentialAction.Cascade);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
+                });
 
             migrationBuilder.CreateTable(
                 name: "Sviluppatori",
                 columns: table => new
                 {
                     SviluppatoreId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     AziendaId = table.Column<int>(type: "int", nullable: false),
                     Nome = table.Column<string>(type: "nvarchar(40)", nullable: false),
                     Cognome = table.Column<string>(type: "nvarchar(40)", nullable: false)
@@ -72,8 +66,7 @@ namespace _07_AziendaApi.Migrations
                         principalTable: "Aziende",
                         principalColumn: "AziendaId",
                         onDelete: ReferentialAction.Cascade);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
+                });
 
             migrationBuilder.CreateTable(
                 name: "SviluppaProdotti",
@@ -97,8 +90,7 @@ namespace _07_AziendaApi.Migrations
                         principalTable: "Sviluppatori",
                         principalColumn: "SviluppatoreId",
                         onDelete: ReferentialAction.Restrict);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
+                });
 
             migrationBuilder.InsertData(
                 table: "Aziende",
