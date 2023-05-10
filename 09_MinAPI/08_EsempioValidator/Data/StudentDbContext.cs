@@ -6,6 +6,6 @@ namespace _08_EsempioValidator.Data
     public class StudentDbContext : DbContext
     {
         public StudentDbContext(DbContextOptions<StudentDbContext> options) : base(options) { }
-        public DbSet<Student> Aziende => Set<Student>();
+        public DbSet<Student> Students => Set<Student>();
     }
 }

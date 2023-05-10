@@ -42,7 +42,7 @@ namespace _08_EsempioValidator.Migrations
 
                     b.HasKey("StudentId");
 
-                    b.ToTable("Aziende");
+                    b.ToTable("Students");
                 });
 #pragma warning restore 612, 618
         }

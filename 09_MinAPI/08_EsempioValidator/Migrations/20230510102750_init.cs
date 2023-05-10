@@ -11,7 +11,7 @@ namespace _08_EsempioValidator.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Aziende",
+                name: "Students",
                 columns: table => new
                 {
                     StudentId = table.Column<int>(type: "int", nullable: false)
@@ -22,7 +22,7 @@ namespace _08_EsempioValidator.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Aziende", x => x.StudentId);
+                    table.PrimaryKey("PK_Students", x => x.StudentId);
                 });
         }
 
@@ -30,7 +30,7 @@ namespace _08_EsempioValidator.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Aziende");
+                name: "Students");
         }
     }
 }

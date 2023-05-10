@@ -11,7 +11,7 @@ using _08_EsempioValidator.Data;
 namespace _08_EsempioValidator.Migrations
 {
     [DbContext(typeof(StudentDbContext))]
-    [Migration("20230509114135_init")]
+    [Migration("20230510102750_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -45,7 +45,7 @@ namespace _08_EsempioValidator.Migrations
 
                     b.HasKey("StudentId");
 
-                    b.ToTable("Aziende");
+                    b.ToTable("Students");
                 });
 #pragma warning restore 612, 618
         }

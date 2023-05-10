@@ -3,6 +3,7 @@ using _08_EsempioValidator.Model;
 using _08_EsempioValidator.Validator;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
@@ -22,5 +23,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseHttpsRedirection();
+
+app.MapGet("/", async (StudentDbContext db) =>
+    await db.Students.ToListAsync());
+
+app.MapPost("/students", async (StudentDbContext db, Student student, IValidator<Student> validator) =>
+{
+    var validatorStudents = validator.Validate(student);
+    if (!validatorStudents.IsValid)
+        return Results.ValidationProblem(validatorStudents.ToDictionary(), 
+           statusCode: (int)HttpStatusCode.UnprocessableEntity);
+    await db.Students.AddAsync(student);
+    await db.SaveChangesAsync();
+    return Results.Created($"/student/{student.StudentId}", student);
+});
 
 app.Run();
