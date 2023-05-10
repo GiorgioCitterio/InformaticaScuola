@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05_TodoItem1", "05_TodoItem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06_TodoApiDTO", "06_TodoApiDTO\06_TodoApiDTO.csproj", "{F36E49B2-6B38-4F01-B07C-1DF952BEA07F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_AziendaApi", "07_AziendaApi\07_AziendaApi.csproj", "{60F05E5E-A6F4-4D72-8F73-DDC61919815C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07_AziendaApi", "07_AziendaApi\07_AziendaApi.csproj", "{60F05E5E-A6F4-4D72-8F73-DDC61919815C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_EsempioValidator", "08_EsempioValidator\08_EsempioValidator.csproj", "{6FAC4C46-4D3D-4ABC-B48C-AAAEE3A0E400}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{60F05E5E-A6F4-4D72-8F73-DDC61919815C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60F05E5E-A6F4-4D72-8F73-DDC61919815C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60F05E5E-A6F4-4D72-8F73-DDC61919815C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FAC4C46-4D3D-4ABC-B48C-AAAEE3A0E400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FAC4C46-4D3D-4ABC-B48C-AAAEE3A0E400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FAC4C46-4D3D-4ABC-B48C-AAAEE3A0E400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FAC4C46-4D3D-4ABC-B48C-AAAEE3A0E400}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
