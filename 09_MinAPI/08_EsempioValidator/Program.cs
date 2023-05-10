@@ -29,7 +29,7 @@ app.MapGet("/", async (StudentDbContext db) =>
 
 app.MapPost("/students", async (StudentDbContext db, Student student, IValidator<Student> validator) =>
 {
-    var validatorStudents = validator.Validate(student);
+    var validatorStudents = validator.Validate(student);    
     if (!validatorStudents.IsValid)
         return Results.ValidationProblem(validatorStudents.ToDictionary(), 
            statusCode: (int)HttpStatusCode.UnprocessableEntity);
