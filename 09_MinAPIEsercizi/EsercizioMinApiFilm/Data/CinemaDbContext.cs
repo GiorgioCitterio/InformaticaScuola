@@ -1,4 +1,5 @@
 ﻿using EsercizioMinApiFilm.Model;
+using Microsoft.AspNetCore.SignalR.Protocol;
 using Microsoft.EntityFrameworkCore;
 
 namespace EsercizioMinApiFilm.Data;
@@ -8,6 +9,8 @@ public class CinemaDbContext : DbContext
     public CinemaDbContext(DbContextOptions<CinemaDbContext> options) : base(options) { }
     public DbSet<Film> Films => Set<Film>();
     public DbSet<Regista> Registas => Set<Regista>();
+    public DbSet<Cinema> Cinemas => Set<Cinema>();
+    public DbSet<Proiezione> Proieziones => Set<Proiezione>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -16,7 +19,22 @@ public class CinemaDbContext : DbContext
             .WithMany(f => f.Films)
             .OnDelete(DeleteBehavior.Restrict)
             .HasForeignKey(f => f.RegistaId);
-        
+
+        modelBuilder.Entity<Proiezione>()
+            .HasOne(c => c.Cinema)
+            .WithMany(p => p.Proieziones)
+            .OnDelete(DeleteBehavior.Restrict)
+            .HasForeignKey(c => c.CinemaId);
+
+        modelBuilder.Entity<Proiezione>()
+            .HasOne(f => f.Film)
+            .WithMany(p => p.Proieziones)
+            .OnDelete(DeleteBehavior.Restrict)
+            .HasForeignKey(f => f.FilmId);
+
+        modelBuilder.Entity<Proiezione>()
+            .HasKey(p => new { p.CinemaId, p.FilmId });
+
         modelBuilder.Entity<Regista>().HasData(
             new Regista() { RegistaId = 1, Cognome = "a", Nome = "b", Nazionalità = "IT"},
             new Regista() { RegistaId = 2, Cognome = "f", Nome = "g", Nazionalità = "IT" },
@@ -27,5 +45,18 @@ public class CinemaDbContext : DbContext
             new Film() { RegistaId = 2, FilmId = 2, Titolo = "d", Durata = 300, DataDiProduzione = DateTime.UtcNow },
             new Film() { RegistaId = 2, FilmId = 3, Titolo = "e", Durata = 700, DataDiProduzione = DateTime.Today },
             new Film() { RegistaId = 3, FilmId = 4, Titolo = "j", Durata = 60, DataDiProduzione = DateTime.Today });
+
+        modelBuilder.Entity<Cinema>().HasData(
+            new Cinema(){CinemaId = 1, Città = "città1", Nome = "nome1", Indirizzo = "indirizzo1"},
+            new Cinema(){CinemaId = 2, Città = "città2", Nome = "nome2", Indirizzo = "indirizzo2"},
+            new Cinema(){CinemaId = 3, Città = "città3", Nome = "nome3", Indirizzo = "indirizzo3"}
+        );
+
+        modelBuilder.Entity<Proiezione>().HasData(
+            new Proiezione(){CinemaId = 1, Data = DateTime.Now, FilmId = 1, Ora = 4},
+            new Proiezione(){CinemaId = 2, Data = DateTime.Now, FilmId = 2, Ora = 15},
+            new Proiezione(){CinemaId = 1, Data = DateTime.Now, FilmId = 3, Ora = 20},
+            new Proiezione(){CinemaId = 3, Data = DateTime.Now, FilmId = 1, Ora = 10}
+        );
     }
 }

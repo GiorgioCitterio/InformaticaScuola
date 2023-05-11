@@ -8,4 +8,5 @@ public class Film
     public int RegistaId { get; set; }
     public Regista Regista { get; set; }
     public int Durata { get; set; }
+    public ICollection<Proiezione> Proieziones { get; set; } = new HashSet<Proiezione>();
 }
