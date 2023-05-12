@@ -35,6 +35,7 @@ namespace EsercizioMinApiFilm.Endpoints
                     Titolo = filmDTO.Titolo,
                     DataDiProduzione = filmDTO.DataDiProduzione,
                     Durata = filmDTO.Durata,
+                    RegistaId = registaId
                 };
                 await db.Films.AddAsync(film);
                 await db.SaveChangesAsync();
@@ -67,11 +68,13 @@ namespace EsercizioMinApiFilm.Endpoints
                 return Results.Ok();
             });
 
-            app.MapDelete("/{filmId}", async (CinemaDbContext db, int filmId) =>
+            film.MapDelete("/{filmId}", async (CinemaDbContext db, int filmId) =>
             {
                 Film? film = await db.Films.FindAsync(filmId);
                 if (film is null) return Results.NotFound();
-                db.Remove(film);
+                var righe = db.Proieziones.Where(p => p.FilmId.Equals(filmId));
+                db.Proieziones.RemoveRange(righe);
+                db.Films.Remove(film);
                 await db.SaveChangesAsync();
                 return Results.Ok();
             });

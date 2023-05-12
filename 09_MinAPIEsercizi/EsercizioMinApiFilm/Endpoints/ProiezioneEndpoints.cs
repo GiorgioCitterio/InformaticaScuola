@@ -31,18 +31,18 @@ public static class ProiezioneEndpoints
             return Results.Created($"/proiezione/{proiezione.CinemaId}/{proiezione.FilmId}", new ProiezioneDTO(proiezione));
         });
 
-        /*
-        proiezione.MapDelete("/", async (CinemaDbContext db, int cinemaId, int filmId, ProiezioneDTO proiezioneDTO) =>
+        
+        proiezione.MapDelete("/", async (CinemaDbContext db, int cinemaId, int filmId) =>
         {
             Cinema? cinema = await db.Cinemas.FindAsync(cinemaId);
             Film? film = await db.Films.FindAsync(filmId);
-            Proiezione? proiezione = await db.Proieziones.FindAsync(proiezioneDTO);
-            if (cinema is null || film is null || proiezione is null) return Results.NotFound();
-            db.Proieziones.Remove(proiezione);
+            if (cinema is null || film is null) return Results.NotFound();
+            var righeDaEliminare = db.Proieziones.Where(c => c.CinemaId.Equals(cinemaId) && c.FilmId.Equals(filmId));
+            db.Proieziones.RemoveRange(righeDaEliminare);
             await db.SaveChangesAsync();
             return Results.Ok();
         });
-        */
+        
 
         cinema.MapGet("/", async (CinemaDbContext db, int cinemaId) =>
         {
