@@ -22,12 +22,11 @@ namespace EsercizioMinApiFilm.Endpoints
                 if (!validatorRegista.IsValid)
                     return Results.ValidationProblem(validatorRegista.ToDictionary(),
                         statusCode: (int)HttpStatusCode.UnprocessableEntity);
-                Regista regista = new Regista()
+                Regista regista = new()
                 {
                     Nome = registaDTO.Nome,
                     Cognome = registaDTO.Cognome,
                     Nazionalità = registaDTO.Nazionalità,
-                    RegistaId = registaDTO.RegistaId
                 };
                 await db.Registas.AddAsync(regista);
                 await db.SaveChangesAsync();

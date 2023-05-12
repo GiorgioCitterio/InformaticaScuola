@@ -131,10 +131,10 @@ namespace EsercizioMinApiFilm.Migrations
                 columns: new[] { "FilmId", "DataDiProduzione", "Durata", "RegistaId", "Titolo" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 5, 11, 17, 3, 59, 385, DateTimeKind.Local).AddTicks(5344), 180, 1, "c" },
-                    { 2, new DateTime(2023, 5, 11, 15, 3, 59, 385, DateTimeKind.Utc).AddTicks(5393), 300, 2, "d" },
-                    { 3, new DateTime(2023, 5, 11, 0, 0, 0, 0, DateTimeKind.Local), 700, 2, "e" },
-                    { 4, new DateTime(2023, 5, 11, 0, 0, 0, 0, DateTimeKind.Local), 60, 3, "j" }
+                    { 1, new DateTime(2023, 5, 12, 13, 33, 49, 688, DateTimeKind.Local).AddTicks(8369), 180, 1, "c" },
+                    { 2, new DateTime(2023, 5, 12, 11, 33, 49, 688, DateTimeKind.Utc).AddTicks(8429), 300, 2, "d" },
+                    { 3, new DateTime(2023, 5, 12, 0, 0, 0, 0, DateTimeKind.Local), 700, 2, "e" },
+                    { 4, new DateTime(2023, 5, 12, 0, 0, 0, 0, DateTimeKind.Local), 60, 3, "j" }
                 });
 
             migrationBuilder.InsertData(
@@ -142,10 +142,10 @@ namespace EsercizioMinApiFilm.Migrations
                 columns: new[] { "CinemaId", "FilmId", "Data", "Ora" },
                 values: new object[,]
                 {
-                    { 1, 6, new DateTime(2023, 5, 11, 17, 3, 59, 385, DateTimeKind.Local).AddTicks(5433), 10 },
-                    { 1, 1, new DateTime(2023, 5, 11, 17, 3, 59, 385, DateTimeKind.Local).AddTicks(5426), 4 },
-                    { 2, 2, new DateTime(2023, 5, 11, 17, 3, 59, 385, DateTimeKind.Local).AddTicks(5429), 15 },
-                    { 3, 3, new DateTime(2023, 5, 11, 17, 3, 59, 385, DateTimeKind.Local).AddTicks(5431), 20 }
+                    { 1, 1, new DateTime(2023, 5, 12, 13, 33, 49, 688, DateTimeKind.Local).AddTicks(8495), 4 },
+                    { 1, 3, new DateTime(2023, 5, 12, 13, 33, 49, 688, DateTimeKind.Local).AddTicks(8505), 20 },
+                    { 2, 2, new DateTime(2023, 5, 12, 13, 33, 49, 688, DateTimeKind.Local).AddTicks(8502), 15 },
+                    { 3, 1, new DateTime(2023, 5, 12, 13, 33, 49, 688, DateTimeKind.Local).AddTicks(8509), 10 }
                 });
 
             migrationBuilder.CreateIndex(

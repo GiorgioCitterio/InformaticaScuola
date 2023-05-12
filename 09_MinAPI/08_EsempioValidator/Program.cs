@@ -9,8 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //aggiungo il validatore
-builder.Services.AddScoped<IValidator<Student>, StudentValidator>();
-//builder.Services.AddValidatorsFromAssemblyContaining<Program>(ServiceLifetime.Scoped);
+//builder.Services.AddScoped<IValidator<Student>, StudentValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<Program>(ServiceLifetime.Transient);
 
 //connessione al database nel caso di Microsoft SQL Server
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");

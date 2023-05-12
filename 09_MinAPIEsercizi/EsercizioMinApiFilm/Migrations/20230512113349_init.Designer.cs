@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EsercizioMinApiFilm.Migrations
 {
     [DbContext(typeof(CinemaDbContext))]
-    [Migration("20230511150359_init")]
+    [Migration("20230512113349_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -97,7 +97,7 @@ namespace EsercizioMinApiFilm.Migrations
                         new
                         {
                             FilmId = 1,
-                            DataDiProduzione = new DateTime(2023, 5, 11, 17, 3, 59, 385, DateTimeKind.Local).AddTicks(5344),
+                            DataDiProduzione = new DateTime(2023, 5, 12, 13, 33, 49, 688, DateTimeKind.Local).AddTicks(8369),
                             Durata = 180,
                             RegistaId = 1,
                             Titolo = "c"
@@ -105,7 +105,7 @@ namespace EsercizioMinApiFilm.Migrations
                         new
                         {
                             FilmId = 2,
-                            DataDiProduzione = new DateTime(2023, 5, 11, 15, 3, 59, 385, DateTimeKind.Utc).AddTicks(5393),
+                            DataDiProduzione = new DateTime(2023, 5, 12, 11, 33, 49, 688, DateTimeKind.Utc).AddTicks(8429),
                             Durata = 300,
                             RegistaId = 2,
                             Titolo = "d"
@@ -113,7 +113,7 @@ namespace EsercizioMinApiFilm.Migrations
                         new
                         {
                             FilmId = 3,
-                            DataDiProduzione = new DateTime(2023, 5, 11, 0, 0, 0, 0, DateTimeKind.Local),
+                            DataDiProduzione = new DateTime(2023, 5, 12, 0, 0, 0, 0, DateTimeKind.Local),
                             Durata = 700,
                             RegistaId = 2,
                             Titolo = "e"
@@ -121,7 +121,7 @@ namespace EsercizioMinApiFilm.Migrations
                         new
                         {
                             FilmId = 4,
-                            DataDiProduzione = new DateTime(2023, 5, 11, 0, 0, 0, 0, DateTimeKind.Local),
+                            DataDiProduzione = new DateTime(2023, 5, 12, 0, 0, 0, 0, DateTimeKind.Local),
                             Durata = 60,
                             RegistaId = 3,
                             Titolo = "j"
@@ -153,28 +153,28 @@ namespace EsercizioMinApiFilm.Migrations
                         {
                             CinemaId = 1,
                             FilmId = 1,
-                            Data = new DateTime(2023, 5, 11, 17, 3, 59, 385, DateTimeKind.Local).AddTicks(5426),
+                            Data = new DateTime(2023, 5, 12, 13, 33, 49, 688, DateTimeKind.Local).AddTicks(8495),
                             Ora = 4
                         },
                         new
                         {
                             CinemaId = 2,
                             FilmId = 2,
-                            Data = new DateTime(2023, 5, 11, 17, 3, 59, 385, DateTimeKind.Local).AddTicks(5429),
+                            Data = new DateTime(2023, 5, 12, 13, 33, 49, 688, DateTimeKind.Local).AddTicks(8502),
                             Ora = 15
                         },
                         new
                         {
-                            CinemaId = 3,
+                            CinemaId = 1,
                             FilmId = 3,
-                            Data = new DateTime(2023, 5, 11, 17, 3, 59, 385, DateTimeKind.Local).AddTicks(5431),
+                            Data = new DateTime(2023, 5, 12, 13, 33, 49, 688, DateTimeKind.Local).AddTicks(8505),
                             Ora = 20
                         },
                         new
                         {
-                            CinemaId = 1,
-                            FilmId = 6,
-                            Data = new DateTime(2023, 5, 11, 17, 3, 59, 385, DateTimeKind.Local).AddTicks(5433),
+                            CinemaId = 3,
+                            FilmId = 1,
+                            Data = new DateTime(2023, 5, 12, 13, 33, 49, 688, DateTimeKind.Local).AddTicks(8509),
                             Ora = 10
                         });
                 });

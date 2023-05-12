@@ -35,7 +35,6 @@ namespace EsercizioMinApiFilm.Endpoints
                     Titolo = filmDTO.Titolo,
                     DataDiProduzione = filmDTO.DataDiProduzione,
                     Durata = filmDTO.Durata,
-                    RegistaId = filmDTO.RegistaId,
                 };
                 await db.Films.AddAsync(film);
                 await db.SaveChangesAsync();
