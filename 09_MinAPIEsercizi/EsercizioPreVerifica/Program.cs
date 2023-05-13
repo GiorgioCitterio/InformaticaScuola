@@ -1,4 +1,6 @@
 using EsercizioPreVerifica.Data;
+using EsercizioPreVerifica.Endpoints;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +16,7 @@ builder.Services.AddDbContext<FilmDbContext>(
             .EnableSensitiveDataLogging()
             .EnableDetailedErrors());
 
+builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 
 var app = builder.Build();
 
@@ -23,7 +26,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
+
+app.MapFilmEndpoints();
+app.MapRegistaEndpoints();
 
 app.Run();
