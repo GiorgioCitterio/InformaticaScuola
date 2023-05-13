@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsercizioMinApiFilm", "EsercizioMinApiFilm\EsercizioMinApiFilm.csproj", "{B26CBDA2-1CAF-4D4C-B641-2F12A416DAB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EsercizioMinApiFilm", "EsercizioMinApiFilm\EsercizioMinApiFilm.csproj", "{B26CBDA2-1CAF-4D4C-B641-2F12A416DAB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsercizioPreVerifica", "EsercizioPreVerifica\EsercizioPreVerifica.csproj", "{8D5248DB-4810-4DCC-8293-B311E14AE9A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B26CBDA2-1CAF-4D4C-B641-2F12A416DAB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B26CBDA2-1CAF-4D4C-B641-2F12A416DAB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B26CBDA2-1CAF-4D4C-B641-2F12A416DAB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D5248DB-4810-4DCC-8293-B311E14AE9A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D5248DB-4810-4DCC-8293-B311E14AE9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D5248DB-4810-4DCC-8293-B311E14AE9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D5248DB-4810-4DCC-8293-B311E14AE9A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
