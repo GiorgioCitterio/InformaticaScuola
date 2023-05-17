@@ -30,5 +30,7 @@ app.UseHttpsRedirection();
 
 app.MapFilmEndpoints();
 app.MapRegistaEndpoints();
+app.MapProiezioneEndpoints();
+app.MapCinemaEndpoints();
 
 app.Run();
