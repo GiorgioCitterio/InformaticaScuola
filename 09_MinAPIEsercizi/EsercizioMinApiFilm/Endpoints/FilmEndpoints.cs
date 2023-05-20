@@ -15,11 +15,12 @@ namespace EsercizioMinApiFilm.Endpoints
             var regista = app.MapGroup("/regista/{registaId}/film");
             var film = app.MapGroup("/film");
 
-            regista.MapGet("/", async(CinemaDbContext db, int registaId) =>
+            regista.MapGet("/", async (CinemaDbContext db, int registaId) =>
             {
                 var filmRegista = await db.Films.Where(f => f.RegistaId == registaId).ToListAsync();
                 if (filmRegista is null) return Results.NotFound();
-                return Results.Ok(filmRegista);
+                List<FilmDTO> filmDTOs = filmRegista.Select(f => new FilmDTO(f)).ToList();
+                return Results.Ok(filmDTOs);
             });
 
             regista.MapPost("/", async (CinemaDbContext db, int registaId, FilmDTO filmDTO, IValidator<FilmDTO> validator) =>

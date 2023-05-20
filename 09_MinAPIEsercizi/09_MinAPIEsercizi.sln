@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EsercizioMinApiFilm", "EsercizioMinApiFilm\EsercizioMinApiFilm.csproj", "{B26CBDA2-1CAF-4D4C-B641-2F12A416DAB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsercizioPreVerifica", "EsercizioPreVerifica\EsercizioPreVerifica.csproj", "{8D5248DB-4810-4DCC-8293-B311E14AE9A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EsercizioPreVerifica", "EsercizioPreVerifica\EsercizioPreVerifica.csproj", "{8D5248DB-4810-4DCC-8293-B311E14AE9A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsercizioRistorante", "EsercizioRistorante\EsercizioRistorante.csproj", "{E1580754-70BE-4B30-A123-B669E2EFB518}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8D5248DB-4810-4DCC-8293-B311E14AE9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D5248DB-4810-4DCC-8293-B311E14AE9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D5248DB-4810-4DCC-8293-B311E14AE9A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1580754-70BE-4B30-A123-B669E2EFB518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1580754-70BE-4B30-A123-B669E2EFB518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1580754-70BE-4B30-A123-B669E2EFB518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1580754-70BE-4B30-A123-B669E2EFB518}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
