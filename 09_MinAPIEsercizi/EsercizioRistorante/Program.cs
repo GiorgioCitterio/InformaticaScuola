@@ -1,10 +1,12 @@
 using EsercizioRistorante.Data;
 using EsercizioRistorante.Endpoints;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 
 var connectionString = builder.Configuration.GetConnectionString("RistoranteAPIConnection");
 var serverVersion = ServerVersion.AutoDetect(connectionString);
@@ -30,5 +32,7 @@ app.UseHttpsRedirection();
 
 app.MapPiattoEndpoints();
 app.MapRistoranteEndpoints();
+app.MapChefEndpoints();
+app.MapPortataEndpoints();
 
 app.Run();
