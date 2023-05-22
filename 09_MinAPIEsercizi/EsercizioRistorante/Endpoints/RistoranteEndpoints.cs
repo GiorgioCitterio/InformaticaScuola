@@ -19,10 +19,12 @@ namespace EsercizioRistorante.Endpoints
 
             ristorante.MapPost("/", async (RistoranteDbContext db, RistoranteDTO ristoranteDTO, IValidator<RistoranteDTO> validator) =>
             {
+                /*
                 var validatorRistorante = await validator.ValidateAsync(ristoranteDTO);
                 if (!validatorRistorante.IsValid)
                     return Results.ValidationProblem(validatorRistorante.ToDictionary(),
                         statusCode: (int)HttpStatusCode.UnprocessableEntity);
+                */
                 Ristorante ristorante = new()
                 {
                     Nome = ristoranteDTO.Nome,
@@ -31,6 +33,17 @@ namespace EsercizioRistorante.Endpoints
                 await db.chef.AddAsync(ristorante);
                 await db.SaveChangesAsync();
                 return Results.Created($"/ristorante/{ristorante.RistoranteId}", new RistoranteDTO(ristorante));
+            }).AddEndpointFilter(async (context, next) =>
+            {
+                RistoranteDTO? rist = context.Arguments.FirstOrDefault(r => r.GetType().Equals(typeof(RistoranteDTO))) as RistoranteDTO;
+                IValidator<RistoranteDTO> validator = context.HttpContext.RequestServices.GetRequiredService<IValidator<RistoranteDTO>>();
+                if (validator is not null && rist is not null)
+                {
+                    var ristValid = validator.Validate(rist);
+                    return Results.ValidationProblem(ristValid.ToDictionary(),
+                        statusCode: (int)HttpStatusCode.UnprocessableEntity);
+                }
+                return await next(context);
             });
 
             ristorante.MapGet("/{ristoranteId}", async (RistoranteDbContext db, int ristoranteId) =>
