@@ -33,7 +33,7 @@ namespace EsercizioRistorante.Endpoints
                 Piatto? piatto = await db.Piattos.FindAsync(piattoId);
                 Chef? chef = await db.Chefs.FindAsync(chefId);
                 if (chef is null || piatto is null) return Results.NotFound();
-                var portate = await db.Portatas.Where(p => p.ChefId == chefId && p.PiattoId == piattoId).ToListAsync();
+                var portate = db.Portatas.Where(p => p.ChefId == chefId && p.PiattoId == piattoId);
                 db.Portatas.RemoveRange(portate);
                 await db.SaveChangesAsync();
                 List<PortataDTO> portataDTOs = portate.Select(p => new PortataDTO(p)).ToList();

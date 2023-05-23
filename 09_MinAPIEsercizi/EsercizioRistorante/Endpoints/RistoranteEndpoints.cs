@@ -15,7 +15,7 @@ namespace EsercizioRistorante.Endpoints
             var ristorante = app.MapGroup("/ristorante");
 
             ristorante.MapGet("/", async (RistoranteDbContext db) =>
-                Results.Ok(await db.chef.Select(r => new RistoranteDTO(r)).ToListAsync()));
+                Results.Ok(await db.Ristorantes.Select(r => new RistoranteDTO(r)).ToListAsync()));
 
             ristorante.MapPost("/", async (RistoranteDbContext db, RistoranteDTO ristoranteDTO, IValidator<RistoranteDTO> validator) =>
             {
@@ -30,7 +30,7 @@ namespace EsercizioRistorante.Endpoints
                     Nome = ristoranteDTO.Nome,
                     Città = ristoranteDTO.Città
                 };
-                await db.chef.AddAsync(ristorante);
+                await db.Ristorantes.AddAsync(ristorante);
                 await db.SaveChangesAsync();
                 return Results.Created($"/ristorante/{ristorante.RistoranteId}", new RistoranteDTO(ristorante));
             }).AddEndpointFilter(async (context, next) =>
@@ -40,15 +40,16 @@ namespace EsercizioRistorante.Endpoints
                 if (validator is not null && rist is not null)
                 {
                     var ristValid = validator.Validate(rist);
-                    return Results.ValidationProblem(ristValid.ToDictionary(),
-                        statusCode: (int)HttpStatusCode.UnprocessableEntity);
+                    if(!ristValid.IsValid)
+                        return Results.ValidationProblem(ristValid.ToDictionary(),
+                            statusCode: (int)HttpStatusCode.UnprocessableEntity);
                 }
                 return await next(context);
-            });
+            });     
 
             ristorante.MapGet("/{ristoranteId}", async (RistoranteDbContext db, int ristoranteId) =>
             {
-                Ristorante? ristorante = await db.chef.FindAsync(ristoranteId);
+                Ristorante? ristorante = await db.Ristorantes.FindAsync(ristoranteId);
                 if(ristorante is null) return Results.NotFound();
                 return Results.Ok(new RistoranteDTO(ristorante));
             });
@@ -59,7 +60,7 @@ namespace EsercizioRistorante.Endpoints
                 if (!validatorRistorante.IsValid)
                     return Results.ValidationProblem(validatorRistorante.ToDictionary(),
                         statusCode: (int)HttpStatusCode.UnprocessableEntity);
-                Ristorante? ristorante = await db.chef.FindAsync(ristoranteId);
+                Ristorante? ristorante = await db.Ristorantes.FindAsync(ristoranteId);
                 if (ristorante is null) return Results.NotFound();
                 ristorante.Città = ristoranteDTO.Città;
                 ristorante.Nome = ristoranteDTO.Nome;
@@ -69,11 +70,11 @@ namespace EsercizioRistorante.Endpoints
 
             ristorante.MapDelete("/{ristoranteId}", async (RistoranteDbContext db, int ristoranteId) =>
             {
-                Ristorante? ristorante = await db.chef.FindAsync(ristoranteId);
+                Ristorante? ristorante = await db.Ristorantes.FindAsync(ristoranteId);
                 if (ristorante is null) return Results.NotFound();
                 var righeDaEliminare = db.Piattos.Where(p => p.RistoranteId.Equals(ristoranteId));
                 db.Piattos.RemoveRange(righeDaEliminare);
-                db.chef.Remove(ristorante);
+                db.Ristorantes.Remove(ristorante);
                 await db.SaveChangesAsync();
                 return Results.Ok(new RistoranteDTO(ristorante));
             });

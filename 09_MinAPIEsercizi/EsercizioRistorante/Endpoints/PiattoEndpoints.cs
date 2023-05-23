@@ -18,7 +18,7 @@ namespace EsercizioRistorante.Endpoints
 
             ristorante.MapGet("/", async (RistoranteDbContext db, int ristoranteId) =>
             {
-                Ristorante? ristorante = await db.chef.FindAsync(ristoranteId);
+                Ristorante? ristorante = await db.Ristorantes.FindAsync(ristoranteId);
                 if (ristorante is null) return Results.NotFound();
                 var piatti = await db.Piattos.Where(p => p.RistoranteId == ristoranteId).ToListAsync();
                 if(piatti is null) return Results.NotFound();
@@ -32,7 +32,7 @@ namespace EsercizioRistorante.Endpoints
                 if (!validatorPiatto.IsValid)
                     return Results.ValidationProblem(validatorPiatto.ToDictionary(),
                         statusCode:(int)HttpStatusCode.UnprocessableEntity);
-                Ristorante? ristorante = await db.chef.FindAsync(ristoranteId);
+                Ristorante? ristorante = await db.Ristorantes.FindAsync(ristoranteId);
                 if (ristorante is null) return Results.NotFound();
                 Piatto piatto = new()
                 {

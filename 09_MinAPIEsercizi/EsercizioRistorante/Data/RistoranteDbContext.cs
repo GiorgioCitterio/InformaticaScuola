@@ -7,8 +7,7 @@ namespace EsercizioRistorante.Data
     public class RistoranteDbContext : DbContext
     {
         public RistoranteDbContext(DbContextOptions<RistoranteDbContext> options) : base(options) { }
-
-        public DbSet<Ristorante> chef => Set<Ristorante>();
+        public DbSet<Ristorante> Ristorantes => Set<Ristorante>();
         public DbSet<Piatto> Piattos => Set<Piatto>();
         public DbSet<Portata> Portatas => Set<Portata>();
         public DbSet<Chef> Chefs => Set<Chef>();
