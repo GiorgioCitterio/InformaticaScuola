@@ -54,18 +54,30 @@ namespace EsercizioRistorante.Endpoints
                 return Results.Ok(new RistoranteDTO(ristorante));
             });
 
-            ristorante.MapPut("/{ristoranteId}", async(RistoranteDbContext db, int ristoranteId, RistoranteDTO ristoranteDTO, IValidator<RistoranteDTO> validator) =>
+            ristorante.MapPut("/{ristoranteId}", async(RistoranteDbContext db, int ristoranteId, RistoranteDTO ristoranteDTO) =>
             {
-                var validatorRistorante = await validator.ValidateAsync(ristoranteDTO);
-                if (!validatorRistorante.IsValid)
-                    return Results.ValidationProblem(validatorRistorante.ToDictionary(),
-                        statusCode: (int)HttpStatusCode.UnprocessableEntity);
+                //var validatorRistorante = await validator.ValidateAsync(ristoranteDTO);
+                //if (!validatorRistorante.IsValid)
+                //    return Results.ValidationProblem(validatorRistorante.ToDictionary(),
+                //        statusCode: (int)HttpStatusCode.UnprocessableEntity);
                 Ristorante? ristorante = await db.Ristorantes.FindAsync(ristoranteId);
                 if (ristorante is null) return Results.NotFound();
                 ristorante.Città = ristoranteDTO.Città;
                 ristorante.Nome = ristoranteDTO.Nome;
                 await db.SaveChangesAsync();
                 return Results.Ok(new RistoranteDTO(ristorante));
+            }).AddEndpointFilter(async(context, next) =>
+            {
+                RistoranteDTO? rist = context.Arguments.FirstOrDefault(r => r.GetType().Equals(typeof(RistoranteDTO))) as RistoranteDTO;
+                IValidator<RistoranteDTO> validator = context.HttpContext.RequestServices.GetRequiredService<IValidator<RistoranteDTO>>();
+                if(rist is not null &&  validator is not null)
+                {
+                    var validatorRistorante = await validator.ValidateAsync(rist);
+                    if (!validatorRistorante.IsValid)
+                        return Results.ValidationProblem(validatorRistorante.ToDictionary(),
+                            statusCode: (int)HttpStatusCode.UnprocessableEntity);
+                }
+                return await next(context);
             });
 
             ristorante.MapDelete("/{ristoranteId}", async (RistoranteDbContext db, int ristoranteId) =>
